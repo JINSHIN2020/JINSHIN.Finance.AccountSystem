@@ -1,0 +1,9 @@
+﻿Author:Andrew Hsiao
+	   Andy Hsiao
+Nick name：Andrew Lewei
+JINSHIN INFORMATION TECHNOLOGY CO.,LTD.
+2019/07/02
+2020/02/03 made many function for accounting verifing
+2022/09/18 add new payment way
+add new register way
+add trail days to test for using

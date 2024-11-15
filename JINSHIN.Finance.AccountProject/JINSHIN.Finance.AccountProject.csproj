@@ -1,0 +1,2002 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8F104D37-937A-48AC-A073-9B75046082A0}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>JINSHIN.Finance.AccountProject</RootNamespace>
+    <AssemblyName>JINSHIN.Finance.AccountProject</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AccMain.Designer.cs">
+      <DependentUpon>AccMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="accounting.Designer.cs" />
+    <Compile Include="Config\SysSettingControl.cs" />
+    <Compile Include="Controls\AddQueryDataForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\AddQueryDataForm.Designer.cs">
+      <DependentUpon>AddQueryDataForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\DlgFrmImg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\DlgFrmImg.Designer.cs">
+      <DependentUpon>DlgFrmImg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Dlg\AssetsCostInfoDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\Dlg\AssetsCostInfoDlg.Designer.cs">
+      <DependentUpon>AssetsCostInfoDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Dlg\AssetsDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\Dlg\AssetsDlg.Designer.cs">
+      <DependentUpon>AssetsDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Dlg\CompanyDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\Dlg\CompanyDlg.Designer.cs">
+      <DependentUpon>CompanyDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Dlg\UserDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\Dlg\UserDlg.designer.cs">
+      <DependentUpon>UserDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\DoubleTablesControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\DoubleTablesControl.Designer.cs">
+      <DependentUpon>DoubleTablesControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\FrmDataMaintain.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\FrmDataMaintain.Designer.cs">
+      <DependentUpon>FrmDataMaintain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\MasterUI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\MasterUI.Designer.cs">
+      <DependentUpon>MasterUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\MasterUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\MasterUserControl.Designer.cs">
+      <DependentUpon>MasterUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\UpdateFrm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\UpdateFrm.Designer.cs">
+      <DependentUpon>UpdateFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\UpdateListForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\UpdateListForm.Designer.cs">
+      <DependentUpon>UpdateListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\usrAccForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\usrAccForm.Designer.cs">
+      <DependentUpon>usrAccForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Financefrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Financefrm.Designer.cs">
+      <DependentUpon>Financefrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCaption.Designer.cs" />
+    <Compile Include="FrmControl\Assets\Dlg\FrmAssetsModify.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmControl\Assets\Dlg\FrmAssetsModify.Designer.cs">
+      <DependentUpon>FrmAssetsModify.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmControl\Assets\FrmAssetsMgt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmControl\Assets\FrmAssetsMgt.Designer.cs">
+      <DependentUpon>FrmAssetsMgt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmControl\Assets\FrmAssetsSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmControl\Assets\FrmAssetsSetting.Designer.cs">
+      <DependentUpon>FrmAssetsSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmControl\Assets\FrmAssetsView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmControl\Assets\FrmAssetsView.Designer.cs">
+      <DependentUpon>FrmAssetsView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmControl\Assets\FrmCostView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmControl\Assets\FrmCostView.Designer.cs">
+      <DependentUpon>FrmCostView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmControl\Business\Accounts\FrmPayMgt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmControl\Business\Accounts\FrmPayMgt.Designer.cs">
+      <DependentUpon>FrmPayMgt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmControl\Business\Accounts\FrmPayPaper.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmControl\Business\Accounts\FrmPayPaper.Designer.cs">
+      <DependentUpon>FrmPayPaper.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmControl\Business\Accounts\FrmPayTicketMgt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmControl\Business\Accounts\FrmPayTicketMgt.Designer.cs">
+      <DependentUpon>FrmPayTicketMgt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmControl\Business\Accounts\FrmPayTicketPaper.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmControl\Business\Accounts\FrmPayTicketPaper.Designer.cs">
+      <DependentUpon>FrmPayTicketPaper.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmControl\Business\Accounts\FrmPayTicketUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmControl\Business\Accounts\FrmPayTicketUpdate.Designer.cs">
+      <DependentUpon>FrmPayTicketUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmControl\Business\Accounts\FrmPayUpdatePaper.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmControl\Business\Accounts\FrmPayUpdatePaper.Designer.cs">
+      <DependentUpon>FrmPayUpdatePaper.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmControl\Business\Accounts\FrmRecMgt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmControl\Business\Accounts\FrmRecMgt.Designer.cs">
+      <DependentUpon>FrmRecMgt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmControl\Business\Accounts\FrmRecPaper.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmControl\Business\Accounts\FrmRecPaper.Designer.cs">
+      <DependentUpon>FrmRecPaper.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmControl\Business\Accounts\FrmRecTicketMgt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmControl\Business\Accounts\FrmRecTicketMgt.Designer.cs">
+      <DependentUpon>FrmRecTicketMgt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmControl\Business\Accounts\FrmRecTicketPaper.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmControl\Business\Accounts\FrmRecTicketPaper.Designer.cs">
+      <DependentUpon>FrmRecTicketPaper.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmControl\Business\Accounts\FrmRecTicketUpdatePaper.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmControl\Business\Accounts\FrmRecTicketUpdatePaper.Designer.cs">
+      <DependentUpon>FrmRecTicketUpdatePaper.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmControl\Business\Accounts\FrmRecUpdatePaper.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmControl\Business\Accounts\FrmRecUpdatePaper.Designer.cs">
+      <DependentUpon>FrmRecUpdatePaper.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmControl\Business\Accounts\VerifyForm\FrmPayTicketVerifyMgt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmControl\Business\Accounts\VerifyForm\FrmPayTicketVerifyMgt.Designer.cs">
+      <DependentUpon>FrmPayTicketVerifyMgt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmControl\Business\Accounts\VerifyForm\FrmPayVerifyMgt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmControl\Business\Accounts\VerifyForm\FrmPayVerifyMgt.Designer.cs">
+      <DependentUpon>FrmPayVerifyMgt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmControl\Business\Accounts\VerifyForm\FrmRecTicketVerifyMgt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmControl\Business\Accounts\VerifyForm\FrmRecTicketVerifyMgt.Designer.cs">
+      <DependentUpon>FrmRecTicketVerifyMgt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmControl\Business\Accounts\VerifyForm\FrmRecVerifyMgt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmControl\Business\Accounts\VerifyForm\FrmRecVerifyMgt.Designer.cs">
+      <DependentUpon>FrmRecVerifyMgt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmControl\Business\CompanyMgt\FrmCompany.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmControl\Business\CompanyMgt\FrmCompany.Designer.cs">
+      <DependentUpon>FrmCompany.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmControl\Business\CompanyMgt\FrmCompanyUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmControl\Business\CompanyMgt\FrmCompanyUpdate.Designer.cs">
+      <DependentUpon>FrmCompanyUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmControl\Business\Dialog\PassDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmControl\Business\Dialog\PassDlg.Designer.cs">
+      <DependentUpon>PassDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmControl\Business\Dialog\ResturantDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmControl\Business\Dialog\ResturantDlg.Designer.cs">
+      <DependentUpon>ResturantDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmControl\Business\FrmAboutLicense.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmControl\Business\FrmAboutLicense.designer.cs">
+      <DependentUpon>FrmAboutLicense.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmControl\Business\FrmAmountSettle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmControl\Business\FrmAmountSettle.Designer.cs">
+      <DependentUpon>FrmAmountSettle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmControl\Business\FrmBookConvert.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmControl\Business\FrmBookConvert.Designer.cs">
+      <DependentUpon>FrmBookConvert.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmControl\Business\FrmBusinessRestaurant.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmControl\Business\FrmBusinessRestaurant.Designer.cs">
+      <DependentUpon>FrmBusinessRestaurant.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmControl\Business\FrmDiaryBook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmControl\Business\FrmDiaryBook.Designer.cs">
+      <DependentUpon>FrmDiaryBook.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmControl\Business\FrmDiaryVerify.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmControl\Business\FrmDiaryVerify.Designer.cs">
+      <DependentUpon>FrmDiaryVerify.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmControl\Business\FrmFuncPwrControl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmControl\Business\FrmFuncPwrControl.Designer.cs">
+      <DependentUpon>FrmFuncPwrControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmControl\Business\FrmInvManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmControl\Business\FrmInvManager.Designer.cs">
+      <DependentUpon>FrmInvManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmControl\Business\FrmInvProduce.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmControl\Business\FrmInvProduce.Designer.cs">
+      <DependentUpon>FrmInvProduce.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmControl\Business\FrmOftenWords.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmControl\Business\FrmOftenWords.Designer.cs">
+      <DependentUpon>FrmOftenWords.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmControl\Business\FrmPowerSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmControl\Business\FrmPowerSetting.designer.cs">
+      <DependentUpon>FrmPowerSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmControl\Business\FrmRestaurantFood.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmControl\Business\FrmRestaurantFood.Designer.cs">
+      <DependentUpon>FrmRestaurantFood.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmControl\Business\FrmSupplyMgt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmControl\Business\FrmSupplyMgt.Designer.cs">
+      <DependentUpon>FrmSupplyMgt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmControl\Business\FrmSysBookExport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmControl\Business\FrmSysBookExport.Designer.cs">
+      <DependentUpon>FrmSysBookExport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmControl\Business\FrmSysLedgerMgt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmControl\Business\FrmSysLedgerMgt.Designer.cs">
+      <DependentUpon>FrmSysLedgerMgt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmControl\Business\Report\FrmProductRpt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmControl\Business\Report\FrmProductRpt.Designer.cs">
+      <DependentUpon>FrmProductRpt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmControl\Business\SN\FrmRegister.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmControl\Business\SN\FrmRegister.Designer.cs">
+      <DependentUpon>FrmRegister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmControl\Business\YearIntegration\FrmYearIntegration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmControl\Business\YearIntegration\FrmYearIntegration.Designer.cs">
+      <DependentUpon>FrmYearIntegration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmControl\DataForm\FrmDataTotalSum.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmControl\DataForm\FrmDataTotalSum.Designer.cs">
+      <DependentUpon>FrmDataTotalSum.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmControl\DataForm\FrmDetailData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmControl\DataForm\FrmDetailData.Designer.cs">
+      <DependentUpon>FrmDetailData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmControl\FrmAccountingData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmControl\FrmAccountingData.Designer.cs">
+      <DependentUpon>FrmAccountingData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmControl\FrmAcountsInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmControl\FrmAcountsInfo.Designer.cs">
+      <DependentUpon>FrmAcountsInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmControl\FrmAffairs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmControl\FrmAffairs.Designer.cs">
+      <DependentUpon>FrmAffairs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmControl\Invoice\DBManagement\FrmDataForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmControl\Invoice\DBManagement\FrmDataForm.designer.cs">
+      <DependentUpon>FrmDataForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmControl\Invoice\DBManagement\FrmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmControl\Invoice\DBManagement\FrmMain.designer.cs">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmControl\Invoice\DBManagement\FrmPDFConvertJPG.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmControl\Invoice\DBManagement\FrmPDFConvertJPG.designer.cs">
+      <DependentUpon>FrmPDFConvertJPG.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmControl\Invoice\DBManagement\Models\ClassModel.cs" />
+    <Compile Include="FrmControl\Invoice\DBManagement\VModel\VJin035.cs" />
+    <Compile Include="FrmControl\Invoice\FrmInvoiceMgt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmControl\Invoice\FrmInvoiceMgt.Designer.cs">
+      <DependentUpon>FrmInvoiceMgt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmControl\Invoice\FrmInvScan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmControl\Invoice\FrmInvScan.Designer.cs">
+      <DependentUpon>FrmInvScan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmControl\Invoice\FrmOftenAccData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmControl\Invoice\FrmOftenAccData.Designer.cs">
+      <DependentUpon>FrmOftenAccData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmControl\Report\FrmDetailReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmControl\Report\FrmDetailReport.Designer.cs">
+      <DependentUpon>FrmDetailReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmControl\Report\FrmFinanceBalanceRpt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmControl\Report\FrmFinanceBalanceRpt.Designer.cs">
+      <DependentUpon>FrmFinanceBalanceRpt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmControl\Report\FrmIncomeStatmentRpt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmControl\Report\FrmIncomeStatmentRpt.Designer.cs">
+      <DependentUpon>FrmIncomeStatmentRpt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmControl\Setting\FrmAffairsAccountingControl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmControl\Setting\FrmAffairsAccountingControl.Designer.cs">
+      <DependentUpon>FrmAffairsAccountingControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmControl\Setting\FrmAffairsAccountSetup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmControl\Setting\FrmAffairsAccountSetup.Designer.cs">
+      <DependentUpon>FrmAffairsAccountSetup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmControl\Setting\FrmAffairsSetupSingleForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmControl\Setting\FrmAffairsSetupSingleForm.Designer.cs">
+      <DependentUpon>FrmAffairsSetupSingleForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmControl\Setting\FrmOftenNames.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmControl\Setting\FrmOftenNames.Designer.cs">
+      <DependentUpon>FrmOftenNames.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmControl\Setting\FrmSysSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmControl\Setting\FrmSysSetting.Designer.cs">
+      <DependentUpon>FrmSysSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmControl\User\DataBar02.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FrmControl\User\DataBar02.Designer.cs">
+      <DependentUpon>DataBar02.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmControl\User\FrmRegUser02.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmControl\User\FrmRegUser02.Designer.cs">
+      <DependentUpon>FrmRegUser02.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmControl\User\PersonalInfoFrm02.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmControl\User\PersonalInfoFrm02.Designer.cs">
+      <DependentUpon>PersonalInfoFrm02.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmControl\User\UserMgtFrm02.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmControl\User\UserMgtFrm02.Designer.cs">
+      <DependentUpon>UserMgtFrm02.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmControl\User\UserUpdateFrm02.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmControl\User\UserUpdateFrm02.Designer.cs">
+      <DependentUpon>UserUpdateFrm02.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmControl\Verify\FrmAccountingEntryManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmControl\Verify\FrmAccountingEntryManager.Designer.cs">
+      <DependentUpon>FrmAccountingEntryManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmControl\Verify\FrmEntryVerify.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmControl\Verify\FrmEntryVerify.Designer.cs">
+      <DependentUpon>FrmEntryVerify.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmControl\Verify\FrmVerifyItemForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmControl\Verify\FrmVerifyItemForm.Designer.cs">
+      <DependentUpon>FrmVerifyItemForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMenu.Designer.cs">
+      <DependentUpon>FrmMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImportDataFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImportDataFrm.Designer.cs">
+      <DependentUpon>ImportDataFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inc\AddQueryInc.cs" />
+    <Compile Include="Inc\Form3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inc\Form3.Designer.cs">
+      <DependentUpon>Form3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InvControlData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InvControlData.Designer.cs">
+      <DependentUpon>InvControlData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AccBookModel.cs" />
+    <Compile Include="Models\AccBookModelView.cs" />
+    <Compile Include="Models\AccCostVerify.cs" />
+    <Compile Include="Models\AccExportType.cs" />
+    <Compile Include="Models\AccLedgerBook.cs" />
+    <Compile Include="Models\AccountingData\AccCostLedgerModelView.cs" />
+    <Compile Include="Models\Accounts\AccNameLink.cs" />
+    <Compile Include="Models\Accounts\DiaryDefaultModel.cs" />
+    <Compile Include="Models\Accounts\DiaryModel.cs" />
+    <Compile Include="Models\AddQueryDataForm\Acc_IDCompareList.cs" />
+    <Compile Include="Models\AddQueryDataForm\Acc_NoCompareList.cs" />
+    <Compile Include="Models\AddQueryDataForm\Acc_VerifyItemFlow.cs" />
+    <Compile Include="Models\AddQueryDataForm\ContentCostLink.cs" />
+    <Compile Include="Models\AddQueryDataForm\VerifyItemGVModelConfig.cs" />
+    <Compile Include="Models\AddQueryDataForm\VerifyMonthCompareList.cs" />
+    <Compile Include="Models\Affairs\AffairsAccountModel.cs" />
+    <Compile Include="Models\Assets\AssetsGridView.cs" />
+    <Compile Include="Models\Assets\Jin051Model.cs" />
+    <Compile Include="Models\Business\FoodModel.cs" />
+    <Compile Include="Models\Business\OrderDetailModel.cs" />
+    <Compile Include="Models\Business\RestaurantModel.cs" />
+    <Compile Include="Models\ChkVModel.cs" />
+    <Compile Include="Models\Config\AccClass.cs" />
+    <Compile Include="Models\Config\AccInputPosModel.cs" />
+    <Compile Include="Models\Config\AccVoiceSetting.cs" />
+    <Compile Include="Models\Config\Acc_CostItemCols.cs" />
+    <Compile Include="Models\Config\ClassTypeConfig.cs" />
+    <Compile Include="Models\Config\CostItemMoneyGridView.cs" />
+    <Compile Include="Models\Config\coststatus.cs" />
+    <Compile Include="Models\Config\DataClass.cs" />
+    <Compile Include="Models\Config\PathModel.cs" />
+    <Compile Include="Models\Config\UpdataeForm\DiaryConfig.cs" />
+    <Compile Include="Models\Config\UpdataeForm\FormConfig.cs" />
+    <Compile Include="Models\CostDataModel.cs" />
+    <Compile Include="Models\DataGridViewModel\AccAccountsGridViewItems.cs" />
+    <Compile Include="Models\DataGridViewModel\AccCostLedgerGridViewItems.cs" />
+    <Compile Include="Models\DataGridViewModel\AccEntryMgtVModel.cs" />
+    <Compile Include="Models\DataGridViewModel\AccIdsGVItems.cs" />
+    <Compile Include="Models\DataGridViewModel\AccidsVierfyGridViewItem.cs" />
+    <Compile Include="Models\DataGridViewModel\AccNoDataGridViewItems.cs" />
+    <Compile Include="Models\DataGridViewModel\AccoutnEntriesGridViewItem.cs" />
+    <Compile Include="Models\DataGridViewModel\AssetsCostDataGridView.cs" />
+    <Compile Include="Models\DataGridViewModel\CountryTaxReport\DetailReportGridViewItems.cs" />
+    <Compile Include="Models\DataGridViewModel\DiffCompareGridViewItem.cs" />
+    <Compile Include="Models\DataGridViewModel\Financial\BalanceSheetGridViewItems.cs" />
+    <Compile Include="Models\DataGridViewModel\Financial\Financial_IncomeGridViewItems.cs" />
+    <Compile Include="Models\DataGridViewModel\VerifyConfirmGridViewModel.cs" />
+    <Compile Include="Models\FormMaintain\AssetsGridViewConfig.cs" />
+    <Compile Include="Models\FormMaintain\FinanceGridViewItems.cs" />
+    <Compile Include="Models\Invoice_ContractAddModel.cs" />
+    <Compile Include="Models\Invoice_ContractModel.cs" />
+    <Compile Include="Models\Log\LogControl.cs" />
+    <Compile Include="Models\Models\YearIntegrationModel.cs" />
+    <Compile Include="Models\QueryClass.cs" />
+    <Compile Include="Models\UControl\AccBookParams.cs" />
+    <Compile Include="Models\UControl\DataParams.cs" />
+    <Compile Include="Models\UControl\MDForm\DetailModel.cs" />
+    <Compile Include="Models\UControl\MDForm\MasterModel.cs" />
+    <Compile Include="Models\UpdateForm\ConditionClass.cs" />
+    <Compile Include="Models\UpdateForm\ImportActions.cs" />
+    <Compile Include="Models\UpdateForm\SalaryGirdFrm.cs" />
+    <Compile Include="Models\UpdateForm\SalaryGridView.cs" />
+    <Compile Include="Models\UpdateForm\UpdateFormEnum.cs" />
+    <Compile Include="Models\UpdateForm\UpdateSalaryCols.cs" />
+    <Compile Include="Models\VarClass.cs" />
+    <Compile Include="Models\VerifyModel\VerifyAccMonthRptModel.cs" />
+    <Compile Include="Models\VerifyModel\VerifyCostDataModel.cs" />
+    <Compile Include="Models\VerifyModel\VerifyCostFinancialModel.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RegisterForm\FrmSysData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegisterForm\FrmSysData.designer.cs">
+      <DependentUpon>FrmSysData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RegisterForm\GetSNFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegisterForm\GetSNFrm.designer.cs">
+      <DependentUpon>GetSNFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RegisterForm\PassMgt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegisterForm\PassMgt.designer.cs">
+      <DependentUpon>PassMgt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Diary.Designer.cs" />
+    <Compile Include="Resources\MsgText.Designer.cs" />
+    <Compile Include="SNForm.cs" />
+    <Compile Include="SNForm.Designer.cs">
+      <DependentUpon>SNForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Testing\TestFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Testing\TestFrm.Designer.cs">
+      <DependentUpon>TestFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewFrm\AffairsFormDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewFrm\AffairsFormDlg.Designer.cs">
+      <DependentUpon>AffairsFormDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewFrm\DiaryAccAcountFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewFrm\DiaryAccAcountFrm.Designer.cs">
+      <DependentUpon>DiaryAccAcountFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewFrm\ModifyDataFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewFrm\ModifyDataFrm.Designer.cs">
+      <DependentUpon>ModifyDataFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewFrm\SalaryFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewFrm\SalaryFrm.Designer.cs">
+      <DependentUpon>SalaryFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewFrm\SalaryFrm01.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewFrm\SalaryFrm01.Designer.cs">
+      <DependentUpon>SalaryFrm01.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VModel\AccAddQueryFormBase.cs" />
+    <Compile Include="VModel\AccBaseCtl.cs" />
+    <Compile Include="VModel\AccBookVModel.cs" />
+    <Compile Include="VModel\AccInvoiceBookVModel.cs" />
+    <Compile Include="VModel\AccLedgerAccount.cs" />
+    <Compile Include="VModel\Accounts\AccountRemainData.cs" />
+    <Compile Include="VModel\Accounts\DiaryAccounts.cs" />
+    <Compile Include="VModel\Acc_CostDataVModel.cs" />
+    <Compile Include="VModel\AddQueryDataForm\Acc_AssetsCtl.cs" />
+    <Compile Include="VModel\AddQueryDataForm\Acc_CostItemView.cs" />
+    <Compile Include="VModel\AddQueryDataForm\Acc_VerifyItemCtl.cs" />
+    <Compile Include="VModel\AddQueryDataForm\Acc_VerifyItemView.cs" />
+    <Compile Include="VModel\AddQueryDataForm\Acc_YearIntegrationCtl.cs" />
+    <Compile Include="VModel\AddQueryDataForm\AddQueryDataBase.cs" />
+    <Compile Include="VModel\AddQueryForm\Acc_CostCompareUpdate.cs" />
+    <Compile Include="VModel\AddQueryForm\Acc_CostDataQuery.cs" />
+    <Compile Include="VModel\AddQueryForm\Acc_InvoiceCostCTL.cs" />
+    <Compile Include="VModel\AddQueryForm\Acc_VModel.cs" />
+    <Compile Include="VModel\AddQueryForm\AddQueryAutoDelete.cs" />
+    <Compile Include="VModel\AddQueryForm\QueryFrmString.cs" />
+    <Compile Include="VModel\Affairs\affairvmodelctl.cs" />
+    <Compile Include="VModel\Affairs\FormVmodel.cs" />
+    <Compile Include="VModel\Affairs\GridViewQueryAffairs.cs" />
+    <Compile Include="VModel\BookCompute.cs" />
+    <Compile Include="VModel\BookConvert2.cs" />
+    <Compile Include="VModel\Business\BusiDataModelControl.cs" />
+    <Compile Include="VModel\Business\BusinessCtl.cs" />
+    <Compile Include="VModel\Business\FinancialRptVModel.cs" />
+    <Compile Include="VModel\Business\LicenseVModel.cs" />
+    <Compile Include="VModel\Business\SysSettingCtl.cs" />
+    <Compile Include="VModel\Business\VAcc_Words.cs" />
+    <Compile Include="VModel\Business\VRestaurantFood.cs" />
+    <Compile Include="VModel\Config\AccCostItemConfig.cs" />
+    <Compile Include="VModel\Conrols\GridViewBase.cs" />
+    <Compile Include="VModel\Conrols\GridView\AccAccountsGridView.cs" />
+    <Compile Include="VModel\Conrols\GridView\AccCostLedgerGridView.cs" />
+    <Compile Include="VModel\Conrols\GridView\AccIdsGridViewItems.cs" />
+    <Compile Include="VModel\Conrols\GridView\AccLedgerGridView.cs" />
+    <Compile Include="VModel\Conrols\GridView\AccNoGridView.cs" />
+    <Compile Include="VModel\Conrols\GridView\AccoutnEntriesGridView.cs" />
+    <Compile Include="VModel\Conrols\GridView\Acc_Affairs_DGItems.cs" />
+    <Compile Include="VModel\Conrols\GridView\Acc_BookDesc_DGItem.cs" />
+    <Compile Include="VModel\Conrols\GridView\Acc_DiaryFoods_DGItems.cs" />
+    <Compile Include="VModel\Conrols\GridView\Acc_OfftenWords_DGItem.cs" />
+    <Compile Include="VModel\Conrols\GridView\Acc_Product_DGItems.cs" />
+    <Compile Include="VModel\Conrols\GridView\AssetsCostGridView.cs" />
+    <Compile Include="VModel\Conrols\GridView\BalanceSheetGridView.cs" />
+    <Compile Include="VModel\Conrols\GridView\DiffCompareGridView.cs" />
+    <Compile Include="VModel\Conrols\GridView\Financial_IncomedgGridView.cs" />
+    <Compile Include="VModel\Conrols\ManageForm\FormControlVModel.cs" />
+    <Compile Include="VModel\Conrols\ManageForm\MDControlVModel.cs" />
+    <Compile Include="VModel\Conrols\Model\GridViewConfigBase.cs" />
+    <Compile Include="VModel\Conrols\Model\GridViewControl.cs" />
+    <Compile Include="VModel\Conrols\Model\VerifyAccGridView.cs" />
+    <Compile Include="VModel\Conrols\QueryModel\GridViewQueryVModel.cs" />
+    <Compile Include="VModel\Conrols\VModel\VerifyAccGridViewVModel.cs" />
+    <Compile Include="VModel\DBClassCtl.cs" />
+    <Compile Include="VModel\DiaryInfo\DiaryBookVModel.cs" />
+    <Compile Include="VModel\FileExport\ExcelFileManager.cs" />
+    <Compile Include="VModel\Finicial\FunctionViewModel.cs" />
+    <Compile Include="VModel\FormMaintain\Acc_Financial_BalanceCtl.cs" />
+    <Compile Include="VModel\FormMaintain\Acc_Financial_IncomeCtl.cs" />
+    <Compile Include="VModel\FormMaintain\FormControlVModel.cs" />
+    <Compile Include="VModel\Invoice_ContrctCtl.cs" />
+    <Compile Include="VModel\MoneyVModel.cs" />
+    <Compile Include="VModel\Money\MoneyVerifyClass.cs" />
+    <Compile Include="VModel\PlayerRound\PlayVModel.cs" />
+    <Compile Include="VModel\PrivilegeControl.cs" />
+    <Compile Include="VModel\SN\TableFrmNo.cs" />
+    <Compile Include="VModel\TPViewer\InvoiceVModel.cs" />
+    <Compile Include="VModel\UpdateListForm\Acc_UpdateLstFrm.cs" />
+    <Compile Include="VModel\UsrControl\UpdateFormVModel.cs" />
+    <Compile Include="VModel\YearBeginViewModel.cs" />
+    <EmbeddedResource Include="AccMain.resx">
+      <DependentUpon>AccMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="accounting.resx" />
+    <EmbeddedResource Include="Controls\AddQueryDataForm.resx">
+      <DependentUpon>AddQueryDataForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\DlgFrmImg.resx">
+      <DependentUpon>DlgFrmImg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Dlg\AssetsCostInfoDlg.resx">
+      <DependentUpon>AssetsCostInfoDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Dlg\AssetsDlg.resx">
+      <DependentUpon>AssetsDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Dlg\CompanyDlg.resx">
+      <DependentUpon>CompanyDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Dlg\UserDlg.resx">
+      <DependentUpon>UserDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\DoubleTablesControl.resx">
+      <DependentUpon>DoubleTablesControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\FrmDataMaintain.resx">
+      <DependentUpon>FrmDataMaintain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\MasterUI.resx">
+      <DependentUpon>MasterUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\MasterUserControl.resx">
+      <DependentUpon>MasterUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\UpdateFrm.resx">
+      <DependentUpon>UpdateFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\UpdateListForm.resx">
+      <DependentUpon>UpdateListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\usrAccForm.resx">
+      <DependentUpon>usrAccForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Financefrm.resx">
+      <DependentUpon>Financefrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCaption.resx" />
+    <EmbeddedResource Include="FrmControl\Assets\Dlg\FrmAssetsModify.resx">
+      <DependentUpon>FrmAssetsModify.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmControl\Assets\FrmAssetsMgt.resx">
+      <DependentUpon>FrmAssetsMgt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmControl\Assets\FrmAssetsSetting.resx">
+      <DependentUpon>FrmAssetsSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmControl\Assets\FrmAssetsView.resx">
+      <DependentUpon>FrmAssetsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmControl\Assets\FrmCostView.resx">
+      <DependentUpon>FrmCostView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmControl\Business\Accounts\FrmPayMgt.resx">
+      <DependentUpon>FrmPayMgt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmControl\Business\Accounts\FrmPayPaper.resx">
+      <DependentUpon>FrmPayPaper.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmControl\Business\Accounts\FrmPayTicketMgt.resx">
+      <DependentUpon>FrmPayTicketMgt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmControl\Business\Accounts\FrmPayTicketPaper.resx">
+      <DependentUpon>FrmPayTicketPaper.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmControl\Business\Accounts\FrmPayTicketUpdate.resx">
+      <DependentUpon>FrmPayTicketUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmControl\Business\Accounts\FrmPayUpdatePaper.resx">
+      <DependentUpon>FrmPayUpdatePaper.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmControl\Business\Accounts\FrmRecMgt.resx">
+      <DependentUpon>FrmRecMgt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmControl\Business\Accounts\FrmRecPaper.resx">
+      <DependentUpon>FrmRecPaper.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmControl\Business\Accounts\FrmRecTicketMgt.resx">
+      <DependentUpon>FrmRecTicketMgt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmControl\Business\Accounts\FrmRecTicketPaper.resx">
+      <DependentUpon>FrmRecTicketPaper.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmControl\Business\Accounts\FrmRecTicketUpdatePaper.resx">
+      <DependentUpon>FrmRecTicketUpdatePaper.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmControl\Business\Accounts\FrmRecUpdatePaper.resx">
+      <DependentUpon>FrmRecUpdatePaper.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmControl\Business\Accounts\VerifyForm\FrmPayTicketVerifyMgt.resx">
+      <DependentUpon>FrmPayTicketVerifyMgt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmControl\Business\Accounts\VerifyForm\FrmPayVerifyMgt.resx">
+      <DependentUpon>FrmPayVerifyMgt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmControl\Business\Accounts\VerifyForm\FrmRecTicketVerifyMgt.resx">
+      <DependentUpon>FrmRecTicketVerifyMgt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmControl\Business\Accounts\VerifyForm\FrmRecVerifyMgt.resx">
+      <DependentUpon>FrmRecVerifyMgt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmControl\Business\CompanyMgt\FrmCompany.resx">
+      <DependentUpon>FrmCompany.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmControl\Business\CompanyMgt\FrmCompanyUpdate.resx">
+      <DependentUpon>FrmCompanyUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmControl\Business\Dialog\PassDlg.resx">
+      <DependentUpon>PassDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmControl\Business\Dialog\ResturantDlg.resx">
+      <DependentUpon>ResturantDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmControl\Business\FrmAboutLicense.resx">
+      <DependentUpon>FrmAboutLicense.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmControl\Business\FrmAmountSettle.resx">
+      <DependentUpon>FrmAmountSettle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmControl\Business\FrmBookConvert.resx">
+      <DependentUpon>FrmBookConvert.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmControl\Business\FrmBusinessRestaurant.resx">
+      <DependentUpon>FrmBusinessRestaurant.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmControl\Business\FrmDiaryBook.resx">
+      <DependentUpon>FrmDiaryBook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmControl\Business\FrmDiaryVerify.resx">
+      <DependentUpon>FrmDiaryVerify.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmControl\Business\FrmFuncPwrControl.resx">
+      <DependentUpon>FrmFuncPwrControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmControl\Business\FrmInvManager.resx">
+      <DependentUpon>FrmInvManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmControl\Business\FrmInvProduce.resx">
+      <DependentUpon>FrmInvProduce.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmControl\Business\FrmOftenWords.resx">
+      <DependentUpon>FrmOftenWords.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmControl\Business\FrmPowerSetting.resx">
+      <DependentUpon>FrmPowerSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmControl\Business\FrmRestaurantFood.resx">
+      <DependentUpon>FrmRestaurantFood.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmControl\Business\FrmSupplyMgt.resx">
+      <DependentUpon>FrmSupplyMgt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmControl\Business\FrmSysBookExport.resx">
+      <DependentUpon>FrmSysBookExport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmControl\Business\FrmSysLedgerMgt.resx">
+      <DependentUpon>FrmSysLedgerMgt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmControl\Business\Report\FrmProductRpt.resx">
+      <DependentUpon>FrmProductRpt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmControl\Business\SN\FrmRegister.resx">
+      <DependentUpon>FrmRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmControl\Business\YearIntegration\FrmYearIntegration.resx">
+      <DependentUpon>FrmYearIntegration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmControl\DataForm\FrmDataTotalSum.resx">
+      <DependentUpon>FrmDataTotalSum.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmControl\DataForm\FrmDetailData.resx">
+      <DependentUpon>FrmDetailData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmControl\FrmAccountingData.resx">
+      <DependentUpon>FrmAccountingData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmControl\FrmAcountsInfo.resx">
+      <DependentUpon>FrmAcountsInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmControl\FrmAffairs.resx">
+      <DependentUpon>FrmAffairs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmControl\Invoice\DBManagement\FrmDataForm.resx">
+      <DependentUpon>FrmDataForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmControl\Invoice\DBManagement\FrmMain.resx">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmControl\Invoice\DBManagement\FrmPDFConvertJPG.resx">
+      <DependentUpon>FrmPDFConvertJPG.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmControl\Invoice\FrmInvoiceMgt.resx">
+      <DependentUpon>FrmInvoiceMgt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmControl\Invoice\FrmInvScan.resx">
+      <DependentUpon>FrmInvScan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmControl\Invoice\FrmOftenAccData.resx">
+      <DependentUpon>FrmOftenAccData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmControl\Report\FrmDetailReport.resx">
+      <DependentUpon>FrmDetailReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmControl\Report\FrmFinanceBalanceRpt.resx">
+      <DependentUpon>FrmFinanceBalanceRpt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmControl\Report\FrmIncomeStatmentRpt.resx">
+      <DependentUpon>FrmIncomeStatmentRpt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmControl\Setting\FrmAffairsAccountingControl.resx">
+      <DependentUpon>FrmAffairsAccountingControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmControl\Setting\FrmAffairsAccountSetup.resx">
+      <DependentUpon>FrmAffairsAccountSetup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmControl\Setting\FrmAffairsSetupSingleForm.resx">
+      <DependentUpon>FrmAffairsSetupSingleForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmControl\Setting\FrmOftenNames.resx">
+      <DependentUpon>FrmOftenNames.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmControl\Setting\FrmSysSetting.resx">
+      <DependentUpon>FrmSysSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmControl\User\DataBar02.resx">
+      <DependentUpon>DataBar02.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmControl\User\FrmRegUser02.resx">
+      <DependentUpon>FrmRegUser02.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmControl\User\PersonalInfoFrm02.resx">
+      <DependentUpon>PersonalInfoFrm02.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmControl\User\UserMgtFrm02.resx">
+      <DependentUpon>UserMgtFrm02.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmControl\User\UserUpdateFrm02.resx">
+      <DependentUpon>UserUpdateFrm02.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmControl\Verify\FrmAccountingEntryManager.resx">
+      <DependentUpon>FrmAccountingEntryManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmControl\Verify\FrmEntryVerify.resx">
+      <DependentUpon>FrmEntryVerify.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmControl\Verify\FrmVerifyItemForm.resx">
+      <DependentUpon>FrmVerifyItemForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMenu.resx">
+      <DependentUpon>FrmMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImportDataFrm.resx">
+      <DependentUpon>ImportDataFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inc\Form3.resx">
+      <DependentUpon>Form3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InvControlData.resx">
+      <DependentUpon>InvControlData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="RegisterForm\FrmSysData.resx">
+      <DependentUpon>FrmSysData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegisterForm\GetSNFrm.resx">
+      <DependentUpon>GetSNFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegisterForm\PassMgt.resx">
+      <DependentUpon>PassMgt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\MsgText.resx" />
+    <EmbeddedResource Include="SNForm.resx">
+      <DependentUpon>SNForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Testing\TestFrm.resx">
+      <DependentUpon>TestFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewFrm\AffairsFormDlg.resx">
+      <DependentUpon>AffairsFormDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewFrm\DiaryAccAcountFrm.resx">
+      <DependentUpon>DiaryAccAcountFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewFrm\ModifyDataFrm.resx">
+      <DependentUpon>ModifyDataFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewFrm\SalaryFrm.resx">
+      <DependentUpon>SalaryFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewFrm\SalaryFrm01.resx">
+      <DependentUpon>SalaryFrm01.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="107\107-1-2月份發票日記簿.csv" />
+    <None Include="107\107-11-12月-A03發票日記簿.csv" />
+    <None Include="107\107-3-4月A03發票日記簿.csv" />
+    <None Include="107\107-5-6月發票簿.csv" />
+    <None Include="107\107-7-8月-A03發票日記簿.csv" />
+    <None Include="107\107-9-10月-A03發票日記簿.csv" />
+    <None Include="AIInFo\1071231--20200525\107697466860.csv" />
+    <None Include="AIInFo\1071231--20200525\107697466861.csv" />
+    <None Include="AIInFo\1071231--20200525\107697466862.csv" />
+    <None Include="AIInFo\1071231--20200525\FinanceBalanceReport20200525142005.xlsx" />
+    <None Include="AIInFo\1071231--20200525\IncomeStatementReport20200525142124.csv" />
+    <None Include="AIInFo\10769746686gsl0.csv" />
+    <None Include="AIInFo\10769746686gsl1.csv" />
+    <None Include="AIInFo\10769746686gsl2.csv" />
+    <None Include="AIInFo\1081231\107697466860.csv" />
+    <None Include="AIInFo\1081231\107697466861.csv" />
+    <None Include="AIInFo\1081231\107697466862.csv" />
+    <None Include="AIInFo\1081231\FinanceBalanceReport20200525143401.xlsx" />
+    <None Include="AIInFo\1081231\IncomeStatementReport20200525143357.csv" />
+    <None Include="AIInFo\108697466860.csv" />
+    <None Include="AIInFo\108697466861.csv" />
+    <None Include="AIInFo\108697466861__yearbooks.csv" />
+    <None Include="AIInFo\108697466862.csv" />
+    <None Include="AIInFo\111697466860.csv" />
+    <None Include="AIInFo\111697466861.csv" />
+    <None Include="AIInFo\111697466861__yearbooks.csv" />
+    <None Include="AIInFo\111697466862.csv" />
+    <None Include="AIInFo\testReprot\testReport.xlsx" />
+    <None Include="AIInFo\tset\107697466862.csv" />
+    <None Include="Backup\1-2月-A03日記簿 - 複製.csv" />
+    <None Include="Backup\108匯出年度帳務比對.xlsx" />
+    <None Include="Backup\Assets.csv" />
+    <None Include="Backup\BalanceSheet.csv" />
+    <None Include="Backup\Data2\1-2月-A03日記簿.csv" />
+    <None Include="Backup\Data2\1-2月-A03發票日記簿.csv" />
+    <None Include="Backup\IncomeFinancial.csv" />
+    <None Include="Backup\IncomeFinancial.xlsx" />
+    <None Include="Backup\IncomeFinancial02.csv" />
+    <None Include="Backup\IncomeFinancial02.xlsx" />
+    <None Include="compare\Assets.csv" />
+    <None Include="Data10\BalanceSheet.csv" />
+    <None Include="Data2\20231101.csv" />
+    <None Include="Data2\20240101.csv" />
+    <None Include="Data2\20240501.csv" />
+    <None Include="Data3\20231101.csv" />
+    <None Include="Data3\20240101.csv" />
+    <None Include="Data3\20240501.csv" />
+    <None Include="Data6\金心帳務兩方.csv" />
+    <None Include="Data7\Assets.csv" />
+    <None Include="Data7\Assets02.csv" />
+    <None Include="Data9\IncomeFinancial.csv" />
+    <None Include="Data\20231101.csv" />
+    <None Include="Data\20240101.csv" />
+    <None Include="Data\20240501.csv" />
+    <None Include="Exports\20230406\20210514.csv" />
+    <None Include="Exports\20230406\20221014174108.csv" />
+    <None Include="Exports\20230406\20221014180601.csv" />
+    <None Include="Exports\20230406\AccAssets_20221027140324.csv" />
+    <None Include="Exports\20230406\AccAssets_20221030174056.csv" />
+    <None Include="Exports\20230406\AccAssets_Cost20221027140324.csv" />
+    <None Include="Exports\20230406\AccFinancial_Balance20210131202555.csv" />
+    <None Include="Exports\20230406\ACcFinancial_Income20210131202603.csv" />
+    <None Include="Exports\20230406\ACcFinancial_Income20210201170605.csv" />
+    <None Include="Exports\20230406\Acc_Confirm20201207144049.csv" />
+    <None Include="Exports\20230406\Acc_Confirm20210106100418.csv" />
+    <None Include="Exports\20230406\Acc_Confirm20210109220208.csv" />
+    <None Include="Exports\20230406\Acc_Confirm20210222091730.csv" />
+    <None Include="Exports\20230406\Acc_Confirm20210222091818.csv" />
+    <None Include="Exports\20230406\Acc_Confirm20210222093442.csv" />
+    <None Include="Exports\20230406\Acc_Confirm20210506195548.csv" />
+    <None Include="Exports\20230406\Acc_Confirm20210506215042.csv" />
+    <None Include="Exports\20230406\Acc_Confirm20210506215056.csv" />
+    <None Include="Exports\20230406\Acc_Confirm20210506224327.csv" />
+    <None Include="Exports\20230406\Acc_Confirm20210506224558.csv" />
+    <None Include="Exports\20230406\Acc_Confirm20210506224910.csv" />
+    <None Include="Exports\20230406\Acc_Confirm20210506225323.csv" />
+    <None Include="Exports\20230406\Acc_Confirm20210509212013.csv" />
+    <None Include="Exports\20230406\Acc_Confirm20210514015428.csv" />
+    <None Include="Exports\20230406\Acc_Confirm20210519190507.csv" />
+    <None Include="Exports\20230406\Acc_Confirm20210519191652.csv" />
+    <None Include="Exports\20230406\Acc_Confirm20210519194807.csv" />
+    <None Include="Exports\20230406\Acc_Confirm20210519201016.csv" />
+    <None Include="Exports\20230406\Acc_Confirm20210519211617.csv" />
+    <None Include="Exports\20230406\Acc_Confirm20210519223618.csv" />
+    <None Include="Exports\20230406\Acc_Confirm20210519225114.csv" />
+    <None Include="Exports\20230406\Acc_Confirm20210519232220.csv" />
+    <None Include="Exports\20230406\Acc_Confirm20220108154637.csv" />
+    <None Include="Exports\20230406\Acc_Confirm20220108154729.csv" />
+    <None Include="Exports\20230406\Acc_Confirm20220108161328.csv" />
+    <None Include="Exports\20230406\Acc_Confirm20220707212956.csv" />
+    <None Include="Exports\20230406\Acc_Confirm20220707213013.csv" />
+    <None Include="Exports\20230406\Acc_Confirm20221001164042.csv" />
+    <None Include="Exports\20230406\Acc_Confirm20221001164052.csv" />
+    <None Include="Exports\20230406\Acc_Confirm20221001164755.csv" />
+    <None Include="Exports\20230406\Acc_Confirm20221003105859.csv" />
+    <None Include="Exports\20230406\Acc_Confirm20221003105912.csv" />
+    <None Include="Exports\20230406\Acc_Confirm20221003105933.csv" />
+    <None Include="Exports\20230406\Acc_Confirm20221003124711.csv" />
+    <None Include="Exports\20230406\Acc_Confirm20221005183611.csv" />
+    <None Include="Exports\20230406\Acc_Confirm20221005183832.csv" />
+    <None Include="Exports\20230406\Acc_Confirm20221218202756.csv" />
+    <None Include="Exports\20230406\Acc_Confirm20221220112116.csv" />
+    <None Include="Exports\20230406\Acc_Confirm20221220151604.csv" />
+    <None Include="Exports\20230406\Acc_Confirm20221220162645.csv" />
+    <None Include="Exports\20230406\Acc_Confirm20221220194125.csv" />
+    <None Include="Exports\20230406\Acc_Confirm20221221104135.csv" />
+    <None Include="Exports\20230406\Acc_Confirm20221221130211.csv" />
+    <None Include="Exports\20230406\Acc_Confirm20221221143801.csv" />
+    <None Include="Exports\20230406\Balance20201207154909.csv" />
+    <None Include="Exports\20230406\Balance20201207161403.csv" />
+    <None Include="Exports\20230406\Balance20201207162826.csv" />
+    <None Include="Exports\20230406\Balance20201207163849.csv" />
+    <None Include="Exports\20230406\Balance20210103175126.csv" />
+    <None Include="Exports\20230406\Balance20210103203425.csv" />
+    <None Include="Exports\20230406\Balance20210103233345.csv" />
+    <None Include="Exports\20230406\Balance20210106150149.csv" />
+    <None Include="Exports\20230406\Balance20210106150522.csv" />
+    <None Include="Exports\20230406\Balance20210106151643.csv" />
+    <None Include="Exports\20230406\Balance20210126202741.csv" />
+    <None Include="Exports\20230406\Balance20210126204754.csv" />
+    <None Include="Exports\20230406\Balance20210126204808.csv" />
+    <None Include="Exports\20230406\Balance20210126204858.csv" />
+    <None Include="Exports\20230406\Balance20210127161351.csv" />
+    <None Include="Exports\20230406\Balance20210128211615.csv" />
+    <None Include="Exports\20230406\Balance20210128212532.csv" />
+    <None Include="Exports\20230406\Balance20210128212736.csv" />
+    <None Include="Exports\20230406\Balance20210128213632.csv" />
+    <None Include="Exports\20230406\Balance20210128232151.csv" />
+    <None Include="Exports\20230406\Balance20210128232419.csv" />
+    <None Include="Exports\20230406\Balance20210128232643.csv" />
+    <None Include="Exports\20230406\Balance20210128232752.csv" />
+    <None Include="Exports\20230406\Balance20210201154212.csv" />
+    <None Include="Exports\20230406\Balance20210201165234.csv" />
+    <None Include="Exports\20230406\Balance20210201165312.csv" />
+    <None Include="Exports\20230406\Balance20210201165415.csv" />
+    <None Include="Exports\20230406\Balance20210201180949.csv" />
+    <None Include="Exports\20230406\Balance20210201181158.csv" />
+    <None Include="Exports\20230406\Balance20210202122219.csv" />
+    <None Include="Exports\20230406\Balance20210202125603.csv" />
+    <None Include="Exports\20230406\Balance20210222111220.csv" />
+    <None Include="Exports\20230406\Balance20210226085220.csv" />
+    <None Include="Exports\20230406\Balance20210519235444.csv" />
+    <None Include="Exports\20230406\Balance20210519235521.csv" />
+    <None Include="Exports\20230406\Balance20210520000851.csv" />
+    <None Include="Exports\20230406\Balance20210520005934.csv" />
+    <None Include="Exports\20230406\Balance20210520011714.csv" />
+    <None Include="Exports\20230406\Balance20210520013904.csv" />
+    <None Include="Exports\20230406\Balance20210520015208.csv" />
+    <None Include="Exports\20230406\Balance20210520023128.csv" />
+    <None Include="Exports\20230406\Balance20210520214116.csv" />
+    <None Include="Exports\20230406\Balance20210520214117.csv" />
+    <None Include="Exports\20230406\Balance20210520233200.csv" />
+    <None Include="Exports\20230406\Balance20210520233251.csv" />
+    <None Include="Exports\20230406\Balance20210520233525.csv" />
+    <None Include="Exports\20230406\Balance20210520233538.csv" />
+    <None Include="Exports\20230406\Balance20210520233903.csv" />
+    <None Include="Exports\20230406\Balance20210522221528.csv" />
+    <None Include="Exports\20230406\Balance20210522222946.csv" />
+    <None Include="Exports\20230406\Balance20210523144159.csv" />
+    <None Include="Exports\20230406\Balance20210524122237.csv" />
+    <None Include="Exports\20230406\Balance20210524221135.csv" />
+    <None Include="Exports\20230406\Balance20211001232255.csv" />
+    <None Include="Exports\20230406\Balance20220604193903.csv" />
+    <None Include="Exports\20230406\Balance20220604194509.csv" />
+    <None Include="Exports\20230406\Balance20220604201357.csv" />
+    <None Include="Exports\20230406\Balance20220604202431.csv" />
+    <None Include="Exports\20230406\Balance20220604202704.csv" />
+    <None Include="Exports\20230406\Balance20220604203013.csv" />
+    <None Include="Exports\20230406\Balance20220604203614.csv" />
+    <None Include="Exports\20230406\Balance20220604203640.csv" />
+    <None Include="Exports\20230406\Balance20220604204022.csv" />
+    <None Include="Exports\20230406\Balance20220604213644.csv" />
+    <None Include="Exports\20230406\Balance20220604224710.csv" />
+    <None Include="Exports\20230406\Balance20220604230534.csv" />
+    <None Include="Exports\20230406\Balance20220604230843.csv" />
+    <None Include="Exports\20230406\Balance20220604231359.csv" />
+    <None Include="Exports\20230406\Balance20220604233117.csv" />
+    <None Include="Exports\20230406\Balance20220604233229.csv" />
+    <None Include="Exports\20230406\Balance20220605001825.csv" />
+    <None Include="Exports\20230406\Balance20220605001953.csv" />
+    <None Include="Exports\20230406\Balance20220605002318.csv" />
+    <None Include="Exports\20230406\Balance20220605002501.csv" />
+    <None Include="Exports\20230406\Balance20220605003059.csv" />
+    <None Include="Exports\20230406\Balance20220605003208.csv" />
+    <None Include="Exports\20230406\Balance20220605003317.csv" />
+    <None Include="Exports\20230406\Balance20220615222308.csv" />
+    <None Include="Exports\20230406\Balance20220615224048.csv" />
+    <None Include="Exports\20230406\Balance20220615231737.csv" />
+    <None Include="Exports\20230406\Balance20220615232217.csv" />
+    <None Include="Exports\20230406\Balance20220619201636.csv" />
+    <None Include="Exports\20230406\Balance20220619203604.csv" />
+    <None Include="Exports\20230406\Balance20220619204758.csv" />
+    <None Include="Exports\20230406\Balance20220619205110.csv" />
+    <None Include="Exports\20230406\Balance20220620222851.csv" />
+    <None Include="Exports\20230406\Balance20220620224133.csv" />
+    <None Include="Exports\20230406\Balance20220620225707.csv" />
+    <None Include="Exports\20230406\Balance20220621192900.csv" />
+    <None Include="Exports\20230406\Balance20220621193031.csv" />
+    <None Include="Exports\20230406\Balance20220621220038.csv" />
+    <None Include="Exports\20230406\Balance20220621221712.csv" />
+    <None Include="Exports\20230406\Balance20220621221751.csv" />
+    <None Include="Exports\20230406\Balance20220621223131.csv" />
+    <None Include="Exports\20230406\Balance20220621225931.csv" />
+    <None Include="Exports\20230406\Balance20220622193518.csv" />
+    <None Include="Exports\20230406\Balance20220622193744.csv" />
+    <None Include="Exports\20230406\Balance20220622193805.csv" />
+    <None Include="Exports\20230406\Balance20220622194600.csv" />
+    <None Include="Exports\20230406\Balance20220622194724.csv" />
+    <None Include="Exports\20230406\Balance20220622195515.csv" />
+    <None Include="Exports\20230406\Balance20220622195706.csv" />
+    <None Include="Exports\20230406\Balance20220622195800.csv" />
+    <None Include="Exports\20230406\Balance20220930144531.csv" />
+    <None Include="Exports\20230406\Balance20220930150046.csv" />
+    <None Include="Exports\20230406\Balance20221003110047.csv" />
+    <None Include="Exports\20230406\Balance20221003110105.csv" />
+    <None Include="Exports\20230406\Balance20221010161307.csv" />
+    <None Include="Exports\20230406\Balance20221010161813.csv" />
+    <None Include="Exports\20230406\Balance20221010162520.csv" />
+    <None Include="Exports\20230406\Balance20221010162716.csv" />
+    <None Include="Exports\20230406\Balance20221010163003.csv" />
+    <None Include="Exports\20230406\Balance20221010163045.csv" />
+    <None Include="Exports\20230406\Balance20221010164051.csv" />
+    <None Include="Exports\20230406\Balance20221010164305.csv" />
+    <None Include="Exports\20230406\Balance20221010165533.csv" />
+    <None Include="Exports\20230406\Balance20221010171536.csv" />
+    <None Include="Exports\20230406\Balance20221010171652.csv" />
+    <None Include="Exports\20230406\Balance20221010175134.csv" />
+    <None Include="Exports\20230406\Balance20221010175141.csv" />
+    <None Include="Exports\20230406\Balance20221010175804.csv" />
+    <None Include="Exports\20230406\Balance20221010175835.csv" />
+    <None Include="Exports\20230406\Balance20221010180031.csv" />
+    <None Include="Exports\20230406\Balance20221010180503.csv" />
+    <None Include="Exports\20230406\Balance20221010180740.csv" />
+    <None Include="Exports\20230406\BalanceReport20201207161420.csv" />
+    <None Include="Exports\20230406\BalanceReportData20201207161420.csv" />
+    <None Include="Exports\20230406\Diary_Data_20201207143930.csv" />
+    <None Include="Exports\20230406\Diary_Data_20201231182611.csv" />
+    <None Include="Exports\20230406\Diary_Data_20210201152052.csv" />
+    <None Include="Exports\20230406\Diary_Data_20210201152215.csv" />
+    <None Include="Exports\20230406\Diary_Data_20210201152438.csv" />
+    <None Include="Exports\20230406\Diary_Data_20210222093016.csv" />
+    <None Include="Exports\20230406\Diary_Data_20210310111112.csv" />
+    <None Include="Exports\20230406\Diary_Data_20210310111141.csv" />
+    <None Include="Exports\20230406\Diary_Data_20210511011646.csv" />
+    <None Include="Exports\20230406\Diary_Data_20210511223717.csv" />
+    <None Include="Exports\20230406\Diary_Data_20210511233644.csv" />
+    <None Include="Exports\20230406\Diary_Data_20210511234740.csv" />
+    <None Include="Exports\20230406\Diary_Data_20210514220150.csv" />
+    <None Include="Exports\20230406\Diary_Data_20210514220156.csv" />
+    <None Include="Exports\20230406\Diary_Data_20210514223108.csv" />
+    <None Include="Exports\20230406\Diary_Data_20210514223118.csv" />
+    <None Include="Exports\20230406\Diary_Data_20210515004951.csv" />
+    <None Include="Exports\20230406\Diary_Data_20210829210646.csv" />
+    <None Include="Exports\20230406\Diary_Data_20210829212718.csv" />
+    <None Include="Exports\20230406\Diary_Data_20210911191903.csv" />
+    <None Include="Exports\20230406\Diary_Data_20210911191918.csv" />
+    <None Include="Exports\20230406\Diary_Data_20210911191941.csv" />
+    <None Include="Exports\20230406\Diary_Data_20211031195459.csv" />
+    <None Include="Exports\20230406\Diary_Data_20211113004747.csv" />
+    <None Include="Exports\20230406\Diary_Data_20211113004753.csv" />
+    <None Include="Exports\20230406\Diary_Data_20211113005353.csv" />
+    <None Include="Exports\20230406\Diary_Data_20211113005525.csv" />
+    <None Include="Exports\20230406\Diary_Data_20211113005729.csv" />
+    <None Include="Exports\20230406\Diary_Data_20220108205029.csv" />
+    <None Include="Exports\20230406\Diary_Data_20220108205043.csv" />
+    <None Include="Exports\20230406\Diary_Data_20220108205245.csv" />
+    <None Include="Exports\20230406\Diary_Data_20220205222535.csv" />
+    <None Include="Exports\20230406\Diary_Data_20220312202226.csv" />
+    <None Include="Exports\20230406\Diary_Data_20220312203002.csv" />
+    <None Include="Exports\20230406\Diary_Data_20220312204654.csv" />
+    <None Include="Exports\20230406\Diary_Data_20220312204659.csv" />
+    <None Include="Exports\20230406\Diary_Data_20220312204818.csv" />
+    <None Include="Exports\20230406\Diary_Data_20220312204828.csv" />
+    <None Include="Exports\20230406\Diary_Data_20220425212123.csv" />
+    <None Include="Exports\20230406\Diary_Data_20220501172607.csv" />
+    <None Include="Exports\20230406\Diary_Data_20220512232353.csv" />
+    <None Include="Exports\20230406\Diary_Data_20220513211718.csv" />
+    <None Include="Exports\20230406\Diary_Data_20220513211734.csv" />
+    <None Include="Exports\20230406\Diary_Data_20220513212648.csv" />
+    <None Include="Exports\20230406\Diary_Data_20220513212654.csv" />
+    <None Include="Exports\20230406\Diary_Data_20220513212726.csv" />
+    <None Include="Exports\20230406\Diary_Data_20220513212732.csv" />
+    <None Include="Exports\20230406\Diary_Data_20220901164426.csv" />
+    <None Include="Exports\20230406\Diary_Data_20220901164818.csv" />
+    <None Include="Exports\20230406\Diary_Data_20220905220600.csv" />
+    <None Include="Exports\20230406\Diary_Data_20220905220604.csv" />
+    <None Include="Exports\20230406\Diary_Data_20221104150853.csv" />
+    <None Include="Exports\20230406\Diary_Data_20221104150859.csv" />
+    <None Include="Exports\20230406\Diary_Data_20230117.xlsx" />
+    <None Include="Exports\20230406\Diary_Data_20230117180602.csv" />
+    <None Include="Exports\20230406\Diary_Data_20230117180608.csv" />
+    <None Include="Exports\20230406\Income20201113132904.csv" />
+    <None Include="Exports\20230406\Income20201115215322.csv" />
+    <None Include="Exports\20230406\Income20201120231530.csv" />
+    <None Include="Exports\20230406\Income20201121232204.csv" />
+    <None Include="Exports\20230406\Income20201128211903.csv" />
+    <None Include="Exports\20230406\Income20201207154900.csv" />
+    <None Include="Exports\20230406\Income20201207161353.csv" />
+    <None Include="Exports\20230406\Income20201207162819.csv" />
+    <None Include="Exports\20230406\Income20201207163844.csv" />
+    <None Include="Exports\20230406\Income20201208112731.csv" />
+    <None Include="Exports\20230406\Income20210103175110.csv" />
+    <None Include="Exports\20230406\Income20210103202019.csv" />
+    <None Include="Exports\20230406\Income20210103203411.csv" />
+    <None Include="Exports\20230406\Income20210103233335.csv" />
+    <None Include="Exports\20230406\Income20210106134923.csv" />
+    <None Include="Exports\20230406\Income20210106145436.csv" />
+    <None Include="Exports\20230406\QueryProductReport20201202182026.csv" />
+    <None Include="Exports\20230406\QueryProductReport20201207155028.csv" />
+    <None Include="Exports\20230406\ReportTotalCostAccounts20201112124708.csv" />
+    <None Include="Exports\20230406\ReportTotalCostAccounts20201112131112.csv" />
+    <None Include="Exports\20230406\ReportTotalCostAccounts20201112150705.csv" />
+    <None Include="Exports\20230406\ReportTotalCostAccounts20210126173041.csv" />
+    <None Include="Exports\20230406\ReportTotalCostAccounts20210129102345.csv" />
+    <None Include="Exports\20230406\ReportTotalCostAccounts20210201153619.csv" />
+    <None Include="Exports\20230406\ReportTotalCostAccounts20220908212550.csv" />
+    <None Include="Exports\20230406\ReportTotalCostAccounts20220908212554.csv" />
+    <None Include="Exports\20230406\ReportTotalCostAccounts20220908213203.csv" />
+    <None Include="Exports\20230406\ReportTotalCostAccounts20221011194802.csv" />
+    <None Include="Exports\20230406\ReportTotalCostAccounts20221011201212.csv" />
+    <None Include="Exports\20230406\ReportTotalCostAccounts20221220175106.csv" />
+    <None Include="Exports\20230406\ReportTotalCostAccounts20221220175108.csv" />
+    <None Include="Exports\20230406\ReportTotalCostAccounts20221221104028.csv" />
+    <None Include="Exports\AssetsControl\Assets__20221019203252.csv" />
+    <None Include="Exports\AssetsControl\Assets__20221019203320.csv" />
+    <None Include="Exports\AssetsControl\Assets__20221019203329.csv" />
+    <None Include="Exports\AssetsControl\Assets__20221019203334.csv" />
+    <None Include="Exports\AssetsControl\Assets__20221019203339.csv" />
+    <None Include="Exports\AssetsControl\Assets__20221019203342.csv" />
+    <None Include="Exports\AssetsControl\Assets__20221019203346.csv" />
+    <None Include="Exports\AssetsControl\Assets__20221019203347.csv" />
+    <None Include="Exports\AssetsControl\Assets__20221019203352.csv" />
+    <None Include="Exports\AssetsControl\Assets__20221019203356.csv" />
+    <None Include="Exports\AssetsControl\Assets__20221019203403.csv" />
+    <None Include="Exports\AssetsControl\Assets__20221019203408.csv" />
+    <None Include="Exports\AssetsControl\Assets__20221019203414.csv" />
+    <None Include="Exports\AssetsControl\Assets__20221019203419.csv" />
+    <None Include="Exports\AssetsControl\Assets__20221019203423.csv" />
+    <None Include="Exports\AssetsControl\Assets__20221019203429.csv" />
+    <None Include="Exports\AssetsControl\Assets__20221019203435.csv" />
+    <None Include="Exports\AssetsControl\Assets__20221019203438.csv" />
+    <None Include="Exports\AssetsControl\Assets__20221019203440.csv" />
+    <None Include="FinanceAccountProgram.ruleset" />
+    <None Include="Finance\1-2月-A03日記簿.csv" />
+    <None Include="Finance\money.csv" />
+    <None Include="Finance\oldbook\1-2月-A03日記簿.csv" />
+    <None Include="Finance\old_tetingdata\money.csv" />
+    <None Include="Finance\test1-2月-A03發票日記簿.csv" />
+    <None Include="Finance\結算資料.csv" />
+    <None Include="JINSHIN.Finance.AccountSystem.csproj" />
+    <None Include="MetaData\106AccountMapTable.csv" />
+    <None Include="NLog.config" />
+    <None Include="NLog.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="report\20200521\AIInfo\107697466860.csv" />
+    <None Include="report\20200521\AIInfo\107697466861.csv" />
+    <None Include="report\20200521\AIInfo\107697466861__yearbooks.csv" />
+    <None Include="report\20200521\AIInfo\107697466862.csv" />
+    <None Include="report\20200521\AIInfo\10769746686DetailToCheck.csv" />
+    <None Include="report\20200521\AIInfo\10769746686Moneys.csv" />
+    <None Include="report\20200521\AIInfo\10769746686NextAmount.csv" />
+    <None Include="report\20200521\FinanceBalanceReport20200521214003.xlsx" />
+    <None Include="report\20200521\IncomeStatementReport20200521215030.csv" />
+    <None Include="report\20200523\FinanceBalanceReport20200523225953.xlsx" />
+    <None Include="report\20200523\IncomeStatementReport20200523225950.csv" />
+    <None Include="report\data\20200521\AIInfo\107697466860.csv" />
+    <None Include="report\data\20200521\AIInfo\107697466861.csv" />
+    <None Include="report\data\20200521\AIInfo\107697466861__yearbooks.csv" />
+    <None Include="report\data\20200521\AIInfo\107697466862.csv" />
+    <None Include="report\data\20200521\AIInfo\10769746686DetailToCheck.csv" />
+    <None Include="report\data\20200521\AIInfo\10769746686Moneys.csv" />
+    <None Include="report\data\20200521\AIInfo\10769746686NextAmount.csv" />
+    <None Include="report\data\20200521\FinanceBalanceReport20200521214003.xlsx" />
+    <None Include="report\data\20200521\IncomeStatementReport20200521215030.csv" />
+    <None Include="report\data\20200523\FinanceBalanceReport20200523225953.xlsx" />
+    <None Include="report\data\20200523\IncomeStatementReport20200523225950.csv" />
+    <None Include="report\data\Detail_Report01_其他費用明細表20220614222310.csv" />
+    <None Include="report\data\Detail_Report01_其他費用明細表20220614225353.csv" />
+    <None Include="report\data\Detail_Report01_其他費用明細表20220615221922.csv" />
+    <None Include="report\data\Detail_Report01_其他費用明細表20220615221924.csv" />
+    <None Include="report\data\Detail_Report01_成本明細表20220612174853.csv" />
+    <None Include="report\data\Detail_Report01_成本明細表20220612175339.csv" />
+    <None Include="report\data\Detail_Report01_成本明細表20220612183246.csv" />
+    <None Include="report\data\Detail_Report01_成本明細表20220613220313.csv" />
+    <None Include="report\data\Detail_Report01_成本明細表20221005141926.csv" />
+    <None Include="report\data\Detail_Report01_成本明細表20221005142007.csv" />
+    <None Include="report\data\Detail_Report01_營業費用明細表20220613220319.csv" />
+    <None Include="report\data\Detail_Report01_營業費用明細表20220613222603.csv" />
+    <None Include="report\data\Detail_Report01_營業費用明細表20220613225238.csv" />
+    <None Include="report\data\Detail_Report01_營業費用明細表20220613231611.csv" />
+    <None Include="report\data\Detail_Report02_其他費用明細表20220614222310.csv" />
+    <None Include="report\data\Detail_Report02_其他費用明細表20220614225353.csv" />
+    <None Include="report\data\Detail_Report02_其他費用明細表20220615221922.csv" />
+    <None Include="report\data\Detail_Report02_其他費用明細表20220615221925.csv" />
+    <None Include="report\data\Detail_Report02_成本明細表20220612174853.csv" />
+    <None Include="report\data\Detail_Report02_成本明細表20220612175339.csv" />
+    <None Include="report\data\Detail_Report02_成本明細表20220612183246.csv" />
+    <None Include="report\data\Detail_Report02_成本明細表20220613220313.csv" />
+    <None Include="report\data\Detail_Report02_成本明細表20221005141927.csv" />
+    <None Include="report\data\Detail_Report02_成本明細表20221005142007.csv" />
+    <None Include="report\data\Detail_Report02_營業費用明細表20220613220319.csv" />
+    <None Include="report\data\Detail_Report02_營業費用明細表20220613222603.csv" />
+    <None Include="report\data\Detail_Report02_營業費用明細表20220613225238.csv" />
+    <None Include="report\data\Detail_Report02_營業費用明細表20220613231611.csv" />
+    <None Include="report\data\Detail_Report_其他費用明細表20220612115156.csv" />
+    <None Include="report\data\Detail_Report_其他費用明細表20220612115806.csv" />
+    <None Include="report\data\Detail_Report_成本明細表20220612115150.csv" />
+    <None Include="report\data\Detail_Report_成本明細表20220612174017.csv" />
+    <None Include="report\data\FinanceBalanceReport20200521214940.xlsx" />
+    <None Include="report\data\FinanceBalanceReport20200521215033.xlsx" />
+    <None Include="report\data\FinanceBalanceReport20200522114738.xlsx" />
+    <None Include="report\data\FinanceBalanceReport20200523155138.xlsx" />
+    <None Include="report\data\FinanceBalanceReport20200524202815.xlsx" />
+    <None Include="report\data\FinanceBalanceReport20200525123128.xlsx" />
+    <None Include="report\data\FinanceBalanceReport20200525125023.xlsx" />
+    <None Include="report\data\FinanceBalanceReport20200525141916.xlsx" />
+    <None Include="report\data\FinanceBalanceReport20200525142005.xlsx" />
+    <None Include="report\data\FinanceBalanceReport20200525143401.xlsx" />
+    <None Include="report\data\FinanceBalanceReport20200525173910.xlsx" />
+    <None Include="report\data\FinanceBalanceReport20210126202742.xlsx" />
+    <None Include="report\data\FinanceBalanceReport20210128211626.xlsx" />
+    <None Include="report\data\FinanceBalanceReport20210201154231.xlsx" />
+    <None Include="report\data\FinanceBalanceReport20210520005949.xlsx" />
+    <None Include="report\data\FinanceBalanceReport20210520014327.xlsx" />
+    <None Include="report\data\FinanceBalanceReport20210520214127.xlsx" />
+    <None Include="report\data\FinanceBalanceReport20210520233910.xlsx" />
+    <None Include="report\data\FinanceBalanceReport20210522221535.xlsx" />
+    <None Include="report\data\FinanceBalanceReport20210522222947.xlsx" />
+    <None Include="report\data\FinanceBalanceReport20210524221138.xlsx" />
+    <None Include="report\data\FinanceBalanceReport20220604213647.xlsx" />
+    <None Include="report\data\FinanceBalanceReport20220604224716.xlsx" />
+    <None Include="report\data\FinanceBalanceReport20220604230845.xlsx" />
+    <None Include="report\data\FinanceBalanceReport20220604231400.xlsx" />
+    <None Include="report\data\FinanceBalanceReport20220604233118.xlsx" />
+    <None Include="report\data\FinanceBalanceReport20220604233231.xlsx" />
+    <None Include="report\data\FinanceBalanceReport20220605002319.xlsx" />
+    <None Include="report\data\FinanceBalanceReport20220605002515.xlsx" />
+    <None Include="report\data\FinanceBalanceReport20220605003318.xlsx" />
+    <None Include="report\data\FinanceBalanceReport20220615222311.xlsx" />
+    <None Include="report\data\FinanceBalanceReport20220619201645.xlsx" />
+    <None Include="report\data\FinanceBalanceReport20220619201649.xlsx" />
+    <None Include="report\data\FinanceBalanceReport20220619205112.xlsx" />
+    <None Include="report\data\FinanceBalanceReport20220620225712.xlsx" />
+    <None Include="report\data\FinanceBalanceReport20220621193033.xlsx" />
+    <None Include="report\data\FinanceBalanceReport20220622193806.xlsx" />
+    <None Include="report\data\FinanceBalanceReport20220622195745.xlsx" />
+    <None Include="report\data\FinanceBalanceReport20220622195747.xlsx" />
+    <None Include="report\data\FinanceBalanceReport20220930144533.xlsx" />
+    <None Include="report\data\FinanceBalanceReport20220930150056.xlsx" />
+    <None Include="report\data\IncomeStatementReport20200522114735.csv" />
+    <None Include="report\data\IncomeStatementReport20201113120435.csv" />
+    <None Include="report\data\IncomeStatementReport20201113120601.csv" />
+    <None Include="report\data\IncomeStatementReport20201113121902.csv" />
+    <None Include="report\data\IncomeStatementReport20201113122002.csv" />
+    <None Include="report\data\IncomeStatementReport20201113124215.csv" />
+    <None Include="report\data\IncomeStatementReport20201113143945.csv" />
+    <None Include="report\data\IncomeStatementReport20201115215325.csv" />
+    <None Include="report\data\IncomeStatementReport20210128211611.csv" />
+    <None Include="report\data\IncomeStatementReport20210201154209.csv" />
+    <None Include="report\data\IncomeStatementReport20210201154239.csv" />
+    <None Include="report\data\IncomeStatementReport20210201170755.csv" />
+    <None Include="report\data\IncomeStatementReport20210520214148.csv" />
+    <None Include="report\data\IncomeStatementReport20210520233918.csv" />
+    <None Include="report\data\IncomeStatementReport20210522221644.csv" />
+    <None Include="report\data\IncomeStatementReport20210522222939.csv" />
+    <None Include="report\data\IncomeStatementReport20210524221131.csv" />
+    <None Include="report\data\IncomeStatementReport20220604201423.csv" />
+    <None Include="report\data\IncomeStatementReport20220604202011.csv" />
+    <None Include="report\data\IncomeStatementReport20220604224659.csv" />
+    <None Include="report\data\IncomeStatementReport20220605003312.csv" />
+    <None Include="report\data\IncomeStatementReport20220615222245.csv" />
+    <None Include="report\data\IncomeStatementReport20220615222304.csv" />
+    <None Include="report\data\IncomeStatementReport20220615231458.csv" />
+    <None Include="report\data\IncomeStatementReport20220615232017.csv" />
+    <None Include="report\data\IncomeStatementReport20220615232025.csv" />
+    <None Include="report\data\IncomeStatementReport20220619201656.csv" />
+    <None Include="report\data\IncomeStatementReport20220619203555.csv" />
+    <None Include="report\data\IncomeStatementReport20220619205009.csv" />
+    <None Include="report\data\IncomeStatementReport20220619205104.csv" />
+    <None Include="report\data\IncomeStatementReport20220620225614.csv" />
+    <None Include="report\data\IncomeStatementReport20220622195755.csv" />
+    <None Include="report\data\IncomeStatementReport20220930144513.csv" />
+    <None Include="report\data\IncomeStatementReport20220930150041.csv" />
+    <None Include="report\data\IncomeStatementReport20221005095440.csv" />
+    <None Include="report\data\IncomeStatementReport20221005095447.csv" />
+    <None Include="report\data\~%24FinanceBalanceReport20220604213647.xlsx" />
+    <None Include="report\data\~%24FinanceBalanceReport20220604224716.xlsx" />
+    <None Include="report\data\~%24FinanceBalanceReport20220604230845.xlsx" />
+    <None Include="report\data\~%24FinanceBalanceReport20220604231400.xlsx" />
+    <None Include="report\data\~%24FinanceBalanceReport20220604233231.xlsx" />
+    <None Include="report\data\~%24FinanceBalanceReport20220605002515.xlsx" />
+    <None Include="report\data\~%24FinanceBalanceReport20220619205112.xlsx" />
+    <None Include="report\data\~%24FinanceBalanceReport20220621193033.xlsx" />
+    <None Include="report\data\~%24FinanceBalanceReport20220622195747.xlsx" />
+    <None Include="report\data\~%24testData.xlsx" />
+    <None Include="report\Detail_Report01_其他費用明細表20220614222310.csv" />
+    <None Include="report\Detail_Report01_其他費用明細表20220614225353.csv" />
+    <None Include="report\Detail_Report01_其他費用明細表20220615221922.csv" />
+    <None Include="report\Detail_Report01_其他費用明細表20220615221924.csv" />
+    <None Include="report\Detail_Report01_成本明細表20220612174853.csv" />
+    <None Include="report\Detail_Report01_成本明細表20220612175339.csv" />
+    <None Include="report\Detail_Report01_成本明細表20220612183246.csv" />
+    <None Include="report\Detail_Report01_成本明細表20220613220313.csv" />
+    <None Include="report\Detail_Report01_營業費用明細表20220613220319.csv" />
+    <None Include="report\Detail_Report01_營業費用明細表20220613222603.csv" />
+    <None Include="report\Detail_Report01_營業費用明細表20220613225238.csv" />
+    <None Include="report\Detail_Report01_營業費用明細表20220613231611.csv" />
+    <None Include="report\Detail_Report02_其他費用明細表20220614222310.csv" />
+    <None Include="report\Detail_Report02_其他費用明細表20220614225353.csv" />
+    <None Include="report\Detail_Report02_其他費用明細表20220615221922.csv" />
+    <None Include="report\Detail_Report02_其他費用明細表20220615221925.csv" />
+    <None Include="report\Detail_Report02_成本明細表20220612174853.csv" />
+    <None Include="report\Detail_Report02_成本明細表20220612175339.csv" />
+    <None Include="report\Detail_Report02_成本明細表20220612183246.csv" />
+    <None Include="report\Detail_Report02_成本明細表20220613220313.csv" />
+    <None Include="report\Detail_Report02_成本明細表20221011191652.csv" />
+    <None Include="report\Detail_Report02_營業費用明細表20220613220319.csv" />
+    <None Include="report\Detail_Report02_營業費用明細表20220613222603.csv" />
+    <None Include="report\Detail_Report02_營業費用明細表20220613225238.csv" />
+    <None Include="report\Detail_Report02_營業費用明細表20220613231611.csv" />
+    <None Include="report\Detail_Report_其他費用明細表20220612115156.csv" />
+    <None Include="report\Detail_Report_其他費用明細表20220612115806.csv" />
+    <None Include="report\Detail_Report_成本明細表20220612115150.csv" />
+    <None Include="report\Detail_Report_成本明細表20220612174017.csv" />
+    <None Include="report\FinanceBalanceReport20200521214940.xlsx" />
+    <None Include="report\FinanceBalanceReport20200521215033.xlsx" />
+    <None Include="report\FinanceBalanceReport20200522114738.xlsx" />
+    <None Include="report\FinanceBalanceReport20200523155138.xlsx" />
+    <None Include="report\FinanceBalanceReport20200524202815.xlsx" />
+    <None Include="report\FinanceBalanceReport20200525123128.xlsx" />
+    <None Include="report\FinanceBalanceReport20200525125023.xlsx" />
+    <None Include="report\FinanceBalanceReport20200525141916.xlsx" />
+    <None Include="report\FinanceBalanceReport20200525142005.xlsx" />
+    <None Include="report\FinanceBalanceReport20200525143401.xlsx" />
+    <None Include="report\FinanceBalanceReport20200525173910.xlsx" />
+    <None Include="report\FinanceBalanceReport20210126202742.xlsx" />
+    <None Include="report\FinanceBalanceReport20210128211626.xlsx" />
+    <None Include="report\FinanceBalanceReport20210201154231.xlsx" />
+    <None Include="report\FinanceBalanceReport20210520005949.xlsx" />
+    <None Include="report\FinanceBalanceReport20210520014327.xlsx" />
+    <None Include="report\FinanceBalanceReport20210520214127.xlsx" />
+    <None Include="report\FinanceBalanceReport20210520233910.xlsx" />
+    <None Include="report\FinanceBalanceReport20210522221535.xlsx" />
+    <None Include="report\FinanceBalanceReport20210522222947.xlsx" />
+    <None Include="report\FinanceBalanceReport20210524221138.xlsx" />
+    <None Include="report\FinanceBalanceReport20220604213647.xlsx" />
+    <None Include="report\FinanceBalanceReport20220604224716.xlsx" />
+    <None Include="report\FinanceBalanceReport20220604230845.xlsx" />
+    <None Include="report\FinanceBalanceReport20220604231400.xlsx" />
+    <None Include="report\FinanceBalanceReport20220604233118.xlsx" />
+    <None Include="report\FinanceBalanceReport20220604233231.xlsx" />
+    <None Include="report\FinanceBalanceReport20220605002319.xlsx" />
+    <None Include="report\FinanceBalanceReport20220605002515.xlsx" />
+    <None Include="report\FinanceBalanceReport20220605003318.xlsx" />
+    <None Include="report\FinanceBalanceReport20220615222311.xlsx" />
+    <None Include="report\FinanceBalanceReport20220619201645.xlsx" />
+    <None Include="report\FinanceBalanceReport20220619201649.xlsx" />
+    <None Include="report\FinanceBalanceReport20220619205112.xlsx" />
+    <None Include="report\FinanceBalanceReport20220620225712.xlsx" />
+    <None Include="report\FinanceBalanceReport20220621193033.xlsx" />
+    <None Include="report\FinanceBalanceReport20220622193806.xlsx" />
+    <None Include="report\FinanceBalanceReport20220622195745.xlsx" />
+    <None Include="report\FinanceBalanceReport20220622195747.xlsx" />
+    <None Include="report\FinanceBalanceReport20221221161715.xlsx" />
+    <None Include="report\IncomeStatementReport20200522114735.csv" />
+    <None Include="report\IncomeStatementReport20201113120435.csv" />
+    <None Include="report\IncomeStatementReport20201113120601.csv" />
+    <None Include="report\IncomeStatementReport20201113121902.csv" />
+    <None Include="report\IncomeStatementReport20201113122002.csv" />
+    <None Include="report\IncomeStatementReport20201113124215.csv" />
+    <None Include="report\IncomeStatementReport20201113143945.csv" />
+    <None Include="report\IncomeStatementReport20201115215325.csv" />
+    <None Include="report\IncomeStatementReport20210128211611.csv" />
+    <None Include="report\IncomeStatementReport20210201154209.csv" />
+    <None Include="report\IncomeStatementReport20210201154239.csv" />
+    <None Include="report\IncomeStatementReport20210201170755.csv" />
+    <None Include="report\IncomeStatementReport20210520214148.csv" />
+    <None Include="report\IncomeStatementReport20210520233918.csv" />
+    <None Include="report\IncomeStatementReport20210522221644.csv" />
+    <None Include="report\IncomeStatementReport20210522222939.csv" />
+    <None Include="report\IncomeStatementReport20210524221131.csv" />
+    <None Include="report\IncomeStatementReport20220604201423.csv" />
+    <None Include="report\IncomeStatementReport20220604202011.csv" />
+    <None Include="report\IncomeStatementReport20220604224659.csv" />
+    <None Include="report\IncomeStatementReport20220605003312.csv" />
+    <None Include="report\IncomeStatementReport20220615222245.csv" />
+    <None Include="report\IncomeStatementReport20220615222304.csv" />
+    <None Include="report\IncomeStatementReport20220615231458.csv" />
+    <None Include="report\IncomeStatementReport20220615232017.csv" />
+    <None Include="report\IncomeStatementReport20220615232025.csv" />
+    <None Include="report\IncomeStatementReport20220619201656.csv" />
+    <None Include="report\IncomeStatementReport20220619203555.csv" />
+    <None Include="report\IncomeStatementReport20220619205009.csv" />
+    <None Include="report\IncomeStatementReport20220619205104.csv" />
+    <None Include="report\IncomeStatementReport20220620225614.csv" />
+    <None Include="report\IncomeStatementReport20220622195755.csv" />
+    <None Include="report\TESTING\107--FinanceBalanceReport20221007105856.xlsx" />
+    <None Include="report\TESTING\107--IncomeStatementReport20221007105752.csv" />
+    <None Include="report\TESTING\108--FinanceBalanceReport20221007110129.xlsx" />
+    <None Include="report\TESTING\108--IncomeStatementReport20221007110117.csv" />
+    <None Include="report\TESTING\FinanceBalanceReport20221008165105.xlsx" />
+    <None Include="report\TESTING\FinanceBalanceReport20221010154334.xlsx" />
+    <None Include="report\TESTING\FinanceBalanceReport20221010161141.xlsx" />
+    <None Include="report\TESTING\FinanceBalanceReport20221010161228.xlsx" />
+    <None Include="report\TESTING\FinanceBalanceReport20221010161309.xlsx" />
+    <None Include="report\TESTING\FinanceBalanceReport20221010190234.xlsx" />
+    <None Include="report\TESTING\FinanceBalanceReport20221010201024.xlsx" />
+    <None Include="report\TESTING\FinanceBalanceReport20221010201939.xlsx" />
+    <None Include="report\TESTING\FinanceBalanceReport20221010202940.xlsx" />
+    <None Include="report\TESTING\FinanceBalanceReport20221010203607.xlsx" />
+    <None Include="report\TESTING\FinanceBalanceReport20221010204103.xlsx" />
+    <None Include="report\TESTING\IncomeStatementReport20221008151825.csv" />
+    <None Include="report\TESTING\IncomeStatementReport20221008153135.csv" />
+    <None Include="report\TESTING\IncomeStatementReport20221008154548.csv" />
+    <None Include="report\TESTING\IncomeStatementReport20221008201723.csv" />
+    <None Include="report\TESTING\IncomeStatementReport20221008222004.csv" />
+    <None Include="report\TESTING\IncomeStatementReport20221008224042.csv" />
+    <None Include="report\TESTING\IncomeStatementReport20221010150852.csv" />
+    <None Include="report\TESTING\IncomeStatementReport20221010153834.csv" />
+    <None Include="report\TESTING\IncomeStatementReport20221010200456.csv" />
+    <None Include="report\TESTING\IncomeStatementReport20221010200820.csv" />
+    <None Include="report\TESTING\setting.xlsx" />
+    <None Include="report\Total_Report01_成本明細表20221011191652.csv" />
+    <None Include="report\~%24FinanceBalanceReport20220604213647.xlsx" />
+    <None Include="report\~%24FinanceBalanceReport20220604224716.xlsx" />
+    <None Include="report\~%24FinanceBalanceReport20220604230845.xlsx" />
+    <None Include="report\~%24FinanceBalanceReport20220604231400.xlsx" />
+    <None Include="report\~%24FinanceBalanceReport20220604233231.xlsx" />
+    <None Include="report\~%24FinanceBalanceReport20220605002515.xlsx" />
+    <None Include="report\~%24FinanceBalanceReport20220619205112.xlsx" />
+    <None Include="report\~%24FinanceBalanceReport20220621193033.xlsx" />
+    <None Include="report\~%24FinanceBalanceReport20220622195747.xlsx" />
+    <None Include="report\~%24testData.xlsx" />
+    <None Include="Resources\Diary.settings" />
+    <None Include="SpecAccounts\108Spc帳目.csv" />
+    <None Include="testingData\107697466860.csv" />
+    <None Include="testingData\107697466861.csv" />
+    <None Include="testingData\107697466862.csv" />
+    <None Include="testingData\10769746686DetailToCheck.csv" />
+    <None Include="testingData\10769746686gsl0.csv" />
+    <None Include="testingData\10769746686gsl1.csv" />
+    <None Include="testingData\10769746686gsl2.csv" />
+    <None Include="testingData\10769746686Moneys.csv" />
+    <None Include="testingData\10769746686NextAmount.csv" />
+    <None Include="testingData\testReprot\testReport.xlsx" />
+    <None Include="testingData\帳簿\10月帳.csv" />
+    <None Include="testingData\帳簿\10月帳.xlsx" />
+    <None Include="testingData\帳簿\9月帳.csv" />
+    <None Include="testingData\帳簿\帳冊.xlsx" />
+    <None Include="UpdateCenter\history\01.updateData.csv" />
+    <None Include="UpdateCenter\history\02.updateData.csv" />
+    <None Include="UpdateCenter\history\03.updateData.csv" />
+    <None Include="UpdateCenter\history\04.updateData.csv" />
+    <None Include="UpdateCenter\history\05.updateData金融資產.csv" />
+    <None Include="UpdateCenter\history\06.updateData.csv" />
+    <None Include="UpdateCenter\history\updateData.csv" />
+    <None Include="UpdateCenter\UpdateData - 複製.csv" />
+    <None Include="UpdateCenter\UpdateData.csv" />
+    <None Include="UpdateHistory\10\updateData.csv" />
+    <None Include="UpdateHistory\2\updateData.csv" />
+    <None Include="UpdateHistory\3\updateData.csv" />
+    <None Include="UpdateHistory\5\updateData.csv" />
+    <None Include="UpdateHistory\6\updateData.csv" />
+    <None Include="UpdateHistory\7\updateData.csv" />
+    <None Include="UpdateHistory\8\updateData.csv" />
+    <None Include="UpdateHistory\9\updateData.csv" />
+    <None Include="UpdateHistory\Acc_Confirm20200229024245.csv" />
+    <None Include="UpdateHistory\updateData.csv" />
+    <None Include="UpdateHistory\使用在沖帳.csv" />
+    <None Include="YearBooks\20200306-Report\107697466860.csv" />
+    <None Include="YearBooks\20200306-Report\107697466861.csv" />
+    <None Include="YearBooks\20200306-Report\107697466862.csv" />
+    <None Include="YearBooks\20200306-Report\FinanceBalanceReport20200326032522.xlsx" />
+    <None Include="YearBooks\20200306-Report\IncomeStatementReport20200326032525.csv" />
+    <None Include="YearBooks\20200306-Report\系統總帳20200326032529.csv" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AIInFo\10769746686ConvertMap87.txt" />
+    <Content Include="AIInFo\Audio\001.m4a" />
+    <Content Include="AIInFo\Audio\002.m4a" />
+    <Content Include="AIInFo\Audio\003.m4a" />
+    <Content Include="AIInFo\Audio\005.m4a" />
+    <Content Include="AIInFo\Audio\006.m4a" />
+    <Content Include="AIInFo\Audio\007.m4a" />
+    <Content Include="AIInFo\Audio\008.m4a" />
+    <Content Include="AIInFo\Audio\009.m4a" />
+    <Content Include="AIInFo\Audio\010.m4a" />
+    <Content Include="AIInFo\Audio\011.m4a" />
+    <Content Include="AIInFo\Audio\012.m4a" />
+    <Content Include="AIInFo\Audio\013.m4a" />
+    <Content Include="AIInFo\Audio\015.m4a" />
+    <Content Include="AIInFo\Audio\016.m4a" />
+    <Content Include="AIInFo\Audio\017.m4a" />
+    <Content Include="AIInFo\Audio\018.m4a" />
+    <Content Include="AIInFo\Audio\019.m4a" />
+    <Content Include="AIInFo\Audio\020.m4a" />
+    <Content Include="AIInFo\Audio\021.m4a" />
+    <Content Include="AIInFo\Audio\022.m4a" />
+    <Content Include="AIInFo\Audio\backup\匯入會計科目明細管理.m4a" />
+    <Content Include="AIInFo\Audio\backup\匯入資料功能.m4a" />
+    <Content Include="AIInFo\Audio\backup\帳務檢視.m4a" />
+    <Content Include="AIInFo\Audio\backup\帳務類別管理.m4a" />
+    <Content Include="AIInFo\Audio\backup\帳目智慧比對訊息提示.m4a" />
+    <Content Include="AIInFo\Audio\backup\帳簿比對功能.m4a" />
+    <Content Include="AIInFo\Audio\backup\帳簿轉換功能.m4a" />
+    <Content Include="AIInFo\Audio\backup\憑證類別管理.m4a" />
+    <Content Include="AIInFo\Audio\backup\損益表.m4a" />
+    <Content Include="AIInFo\Audio\backup\智慧帳冊.m4a" />
+    <Content Include="AIInFo\Audio\backup\智慧帳冊月管理功能.m4a" />
+    <Content Include="AIInFo\Audio\backup\會計金額智慧借貸檢查.m4a" />
+    <Content Include="AIInFo\Audio\backup\登入成功.m4a" />
+    <Content Include="AIInFo\Audio\backup\系統總帳匯出比對管理.m4a" />
+    <Content Include="AIInFo\Audio\backup\結算帳務產出.m4a" />
+    <Content Include="AIInFo\Audio\backup\資料匯入帳務整理.m4a" />
+    <Content Include="AIInFo\Audio\backup\資產及折舊產出.m4a" />
+    <Content Include="AIInFo\Audio\backup\資產折舊勾稽比對.m4a" />
+    <Content Include="AIInFo\Audio\backup\資產負債表.m4a" />
+    <Content Include="AIInFo\Audio\backup\開口詞.m4a" />
+    <Content Include="AIInFo\Audio\帳簿比對功能.m4a" />
+    <Content Include="AssetsConfig.txt" />
+    <Content Include="Audio\again.mp3" />
+    <Content Include="Audio\beep.mp3" />
+    <Content Include="Config\DataUpdate.sql" />
+    <Content Include="Config\moneyproduct.txt" />
+    <Content Include="Content\Data.txt" />
+    <Content Include="Content\建立表格資料.sql" />
+    <Content Include="FinanceAccountProgram.sln" />
+    <Content Include="Finance\money.txt" />
+    <Content Include="Finance\old_tetingdata\money.txt" />
+    <Content Include="Finance\新文字文件.txt" />
+    <Content Include="imgs\3-20240913171030.bmp" />
+    <Content Include="imgs\3-20240913171031.bmp" />
+    <Content Include="imgs\3-20240913171033.bmp" />
+    <Content Include="imgs\3-20240913171034.bmp" />
+    <Content Include="imgs\3-20240913171035.bmp" />
+    <Content Include="imgs\3-20240913171036.bmp" />
+    <Content Include="imgs\3-20240913171038.bmp" />
+    <Content Include="imgs\3-20240913171039.bmp" />
+    <Content Include="imgs\3-20240913171040.bmp" />
+    <Content Include="imgs\3-20240913171041.bmp" />
+    <Content Include="imgs\3-20240913171043.bmp" />
+    <Content Include="imgs\3-20240913171044.bmp" />
+    <Content Include="imgs\3-20240913171045.bmp" />
+    <Content Include="imgs\3-20240913171047.bmp" />
+    <Content Include="imgs\3-20240913171048.bmp" />
+    <Content Include="imgs\3-20240913171049.bmp" />
+    <Content Include="imgs\3-20240913171050.bmp" />
+    <Content Include="imgs\3-20240913171052.bmp" />
+    <Content Include="imgs\3-20240913171053.bmp" />
+    <Content Include="imgs\3-20240913171054.bmp" />
+    <Content Include="imgs\Invoice\01-02月--WE-34221527.jpeg" />
+    <Content Include="imgs\Invoice\0102--WN74789453.jpeg" />
+    <Content Include="imgs\Invoice\0109--WZ70171031.jpeg" />
+    <Content Include="imgs\Invoice\0120--WZ75365212.jpeg" />
+    <Content Include="imgs\Invoice\02-04--XB-63089593.jpeg" />
+    <Content Include="imgs\Invoice\0202--WN74797585.jpeg" />
+    <Content Include="imgs\Invoice\0210--WZ81849618.jpeg" />
+    <Content Include="imgs\Invoice\0214--WZ8325254707.jpeg" />
+    <Content Include="imgs\Invoice\0223--WZ8779914308.jpeg" />
+    <Content Include="imgs\Invoice\0223--WZ88003573.jpeg" />
+    <Content Include="imgs\Invoice\0223--WZ8800357309.jpeg" />
+    <Content Include="imgs\Invoice\0224--WZ88443770.jpeg" />
+    <Content Include="imgs\Invoice\0225--XB-63504324.jpeg" />
+    <Content Include="imgs\Invoice\03-02--YQ74789131.jpeg" />
+    <Content Include="imgs\Invoice\0301--ZC32158950.jpeg" />
+    <Content Include="imgs\Invoice\0302--YQ74789131.jpeg" />
+    <Content Include="imgs\Invoice\04-02--YQ74798325.jpeg" />
+    <Content Include="imgs\Invoice\05-02--AV74788945.jpeg" />
+    <Content Include="imgs\Invoice\05-06月--AM-34172010.jpeg" />
+    <Content Include="imgs\Invoice\0602-AV-74798168.jpeg" />
+    <Content Include="imgs\Invoice\07-08月--CM-34219539.jpeg" />
+    <Content Include="imgs\Invoice\0702--CV74789138.jpeg" />
+    <Content Include="imgs\Invoice\09-10月--AM-34172010.jpeg" />
+    <Content Include="imgs\Invoice\09-10月--AV-74788945.jpeg" />
+    <Content Include="imgs\Invoice\09-10月--AV-74798168.jpeg" />
+    <Content Include="imgs\Invoice\09-10月--CM-34219539.jpeg" />
+    <Content Include="imgs\Invoice\09-10月--CM-74789138.jpeg" />
+    <Content Include="imgs\Invoice\09-10月--CM-74798152.jpeg" />
+    <Content Include="imgs\Invoice\09-10月--EX-74788898.jpeg" />
+    <Content Include="imgs\Invoice\09-10月--EX-74798218.jpeg" />
+    <Content Include="imgs\Invoice\09-10月--EX74788898.jpeg" />
+    <Content Include="imgs\Invoice\09-10月--EX74798218.jpeg" />
+    <Content Include="imgs\Invoice\09-10月--WE-34221527.jpeg" />
+    <Content Include="imgs\Invoice\09-10月--WN-74789453.jpeg" />
+    <Content Include="imgs\Invoice\09-10月--WN-74797585.jpeg" />
+    <Content Include="imgs\Invoice\09-10月--YQ-74789131.jpeg" />
+    <Content Include="imgs\Invoice\09-10月--YQ-74798325.jpeg" />
+    <Content Include="imgs\Invoice\11-12月--BJ51896614.jpeg" />
+    <Content Include="imgs\Invoice\11-12月--CY-99351147.jpeg" />
+    <Content Include="imgs\Invoice\11-12月--DH42076474.jpeg" />
+    <Content Include="imgs\Invoice\11-12月--DH42085671.jpeg" />
+    <Content Include="imgs\Invoice\11-12月--DH42632426.jpeg" />
+    <Content Include="imgs\Invoice\11-12月--DH42692620.jpeg" />
+    <Content Include="imgs\Invoice\11-12月--DH53980421.jpeg" />
+    <Content Include="imgs\Invoice\11-12月--FK69052697.jpeg" />
+    <Content Include="imgs\Invoice\11-12月--FK69782982.jpeg" />
+    <Content Include="imgs\Invoice\11-12月--FK72038326.jpeg" />
+    <Content Include="imgs\Invoice\11-12月--FK72652438.jpeg" />
+    <Content Include="imgs\Invoice\11-12月--FK72970242.jpeg" />
+    <Content Include="imgs\Invoice\11-12月--FK73126215.jpeg" />
+    <Content Include="imgs\Invoice\11-12月--FK75135960.jpeg" />
+    <Content Include="imgs\Invoice\11-12月--FK75716931.jpeg" />
+    <Content Include="imgs\Invoice\11-12月--FK81147445.jpeg" />
+    <Content Include="imgs\Invoice\11-12月--FK81504075.jpeg" />
+    <Content Include="imgs\Invoice\11-12月--FK82475552.jpeg" />
+    <Content Include="imgs\Invoice\11-12月--FK82774807.jpeg" />
+    <Content Include="imgs\Invoice\11-12月--FK85339757.jpeg" />
+    <Content Include="imgs\Invoice\11-12月--FK85612118.jpeg" />
+    <Content Include="imgs\Invoice\11-12月--GR-34177202.jpeg" />
+    <Content Include="imgs\Invoice\11-12月--GZ-74788862.jpeg" />
+    <Content Include="imgs\Invoice\11-12月--GZ-74798599.jpeg" />
+    <Content Include="imgs\Invoice\11-12月--GZ74788862.jpeg" />
+    <Content Include="imgs\Invoice\11-12月--GZ74798599.jpeg" />
+    <Content Include="imgs\Invoice\11-12月--HM71325568.jpeg" />
+    <Content Include="imgs\Invoice\11-12月--HM71567176.jpeg" />
+    <Content Include="imgs\Invoice\11-12月--HM74130477.jpeg" />
+    <Content Include="imgs\Invoice\11-12月--HM75876135.jpeg" />
+    <Content Include="imgs\Invoice\11-12月--HM86188291.jpeg" />
+    <Content Include="imgs\Invoice\11-12月--HM86668055.jpeg" />
+    <Content Include="imgs\Invoice\11-12月--HM87017371.jpeg" />
+    <Content Include="imgs\Invoice\11-12月--HM88581512.jpeg" />
+    <Content Include="imgs\Invoice\11-25--UG-35581468.jpeg" />
+    <Content Include="imgs\Invoice\11-26--UJ-46308333.jpeg" />
+    <Content Include="imgs\Invoice\4月份--YQ74798325.jpeg" />
+    <Content Include="imgs\Invoice\5月份--AV-74788945.jpeg" />
+    <Content Include="imgs\Invoice\8月份--CV74798152.jpeg" />
+    <Content Include="JINSHIN.Finance.AccountSystem.csproj.user" />
+    <Content Include="Libaries\AForge.Controls.dll" />
+    <Content Include="Libaries\AForge.dll" />
+    <Content Include="Libaries\JINSHINVision.dll" />
+    <Content Include="License.txt" />
+    <Content Include="License\%24this.BackgroundImage.gif" />
+    <Content Include="License\01.jpg" />
+    <Content Include="License\Readme.txt" />
+    <Content Include="License\背景.gif" />
+    <Content Include="Models\Accounts\說明.txt" />
+    <Content Include="photos\1.gif" />
+    <Content Include="readme.txt" />
+    <Content Include="readmedata.txt" />
+    <Content Include="report\TESTING\data.txt" />
+    <Content Include="Resources\Note\readme.txt" />
+    <Content Include="size.txt" />
+    <Content Include="testingData\testAllReport.txt" />
+    <Content Include="testingData\testReport.txt" />
+    <Content Include="TextTemplate1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>TextTemplate11.txt</LastGenOutput>
+    </Content>
+    <Content Include="TextTemplate1.txt" />
+    <Content Include="TextTemplate11.txt">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TextTemplate1.tt</DependentUpon>
+    </Content>
+    <Content Include="UpdateLog.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Debug\" />
+    <Folder Include="CameraPics\" />
+    <Folder Include="FrmControl\Business\Money\" />
+    <Folder Include="FrmControl\Business\User\" />
+    <Folder Include="FrmControl\Invoice\DBManagement\Imgs\" />
+    <Folder Include="FrmControl\Invoice\DBManagement\pdfs\" />
+    <Folder Include="FrmControl\Invoice\DBManagement\pics\" />
+    <Folder Include="FrmControl\Invoice\DBManagement\src\" />
+    <Folder Include="Models\FormShow\" />
+    <Folder Include="Models\VerifyItem\" />
+    <Folder Include="Output\" />
+    <Folder Include="VModel\AssetsCost\" />
+    <Folder Include="VModel\Business\Assets\" />
+    <Folder Include="VModel\Conrols\UpdateFrm\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

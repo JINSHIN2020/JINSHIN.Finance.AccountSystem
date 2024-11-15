@@ -1,0 +1,1507 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="..\packages\OpenCvSharp4.runtime.win.4.5.5.20211231\build\netstandard\OpenCvSharp4.runtime.win.props" Condition="Exists('..\packages\OpenCvSharp4.runtime.win.4.5.5.20211231\build\netstandard\OpenCvSharp4.runtime.win.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1F5AEF24-430E-4539-A33D-5D315147FC54}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>JINSHIN.Finance.AccountSystem</RootNamespace>
+    <AssemblyName>JINSHIN.Finance.AccountSystem</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+    <PublishUrl>D:\產品\上市\銷售系統\系統程式\金心資訊財務報稅系統\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <UpdateUrl>https://www.jinshin.tw/Product/</UpdateUrl>
+    <SupportUrl>http://www.jinshin.tw</SupportUrl>
+    <ErrorReportUrl>http://www.jinshin.tw</ErrorReportUrl>
+    <ProductName>金心財務報稅系統</ProductName>
+    <PublisherName>金心資訊科技有限公司</PublisherName>
+    <OpenBrowserOnPublish>false</OpenBrowserOnPublish>
+    <ApplicationRevision>73</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>
+    </DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>FinanceAccountProgram.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>
+    </DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>FinanceAccountProgram.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>A413802C49502D4640CD49DC217F9289B8B8B226</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>JINSHIN.Finance.AccountSystem_3_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AForge, Version=2.2.5.0, Culture=neutral, PublicKeyToken=c1db6ff4eaa06aeb, processorArchitecture=MSIL">
+      <HintPath>..\packages\AForge.2.2.5\lib\AForge.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="AForge.Controls, Version=2.2.5.0, Culture=neutral, PublicKeyToken=a8ac264d1dc6b9d9, processorArchitecture=MSIL">
+      <HintPath>..\packages\AForge.Controls.2.2.5\lib\AForge.Controls.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="AForge.Imaging, Version=2.2.5.0, Culture=neutral, PublicKeyToken=ba8ddea9676ca48b, processorArchitecture=MSIL">
+      <HintPath>..\packages\AForge.Imaging.2.2.5\lib\AForge.Imaging.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Math, Version=2.2.5.0, Culture=neutral, PublicKeyToken=abba2e25397ee8c9, processorArchitecture=MSIL">
+      <HintPath>..\packages\AForge.Math.2.2.5\lib\AForge.Math.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video, Version=2.2.5.0, Culture=neutral, PublicKeyToken=cbfb6e07d173c401, processorArchitecture=MSIL">
+      <HintPath>..\packages\AForge.Video.2.2.5\lib\AForge.Video.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video.DirectShow, Version=2.2.5.0, Culture=neutral, PublicKeyToken=61ea4348d43881b7, processorArchitecture=MSIL">
+      <HintPath>..\packages\AForge.Video.DirectShow.2.2.5\lib\AForge.Video.DirectShow.dll</HintPath>
+    </Reference>
+    <Reference Include="AxInterop.WMPLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\WMPLib.1.0.0\lib\AxInterop.WMPLib.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.9.0, Culture=neutral, PublicKeyToken=0e99375e54769942, processorArchitecture=MSIL">
+      <HintPath>..\packages\Portable.BouncyCastle.1.8.9\lib\net40\BouncyCastle.Crypto.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=1.3.3.11, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
+      <HintPath>..\packages\SharpZipLib.1.3.3\lib\net45\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.WMPLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\WMPLib.1.0.0\lib\Interop.WMPLib.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
+      <HintPath>..\packages\NLog.4.7.13\lib\net45\NLog.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NPOI, Version=2.5.4.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\NPOI.2.5.4\lib\net45\NPOI.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OOXML, Version=2.5.4.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\NPOI.2.5.4\lib\net45\NPOI.OOXML.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXml4Net, Version=2.5.4.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\NPOI.2.5.4\lib\net45\NPOI.OpenXml4Net.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXmlFormats, Version=2.5.4.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\NPOI.2.5.4\lib\net45\NPOI.OpenXmlFormats.dll</HintPath>
+    </Reference>
+    <Reference Include="OpenCvSharp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=6adad1e807fea099, processorArchitecture=MSIL">
+      <HintPath>..\packages\OpenCvSharp4.4.5.5.20211231\lib\netstandard2.0\OpenCvSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="OpenCvSharp.Extensions, Version=1.0.0.0, Culture=neutral, PublicKeyToken=6adad1e807fea099, processorArchitecture=MSIL">
+      <HintPath>..\packages\OpenCvSharp4.Extensions.4.5.5.20211231\lib\netstandard2.0\OpenCvSharp.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="SkiaSharp, Version=2.88.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
+      <HintPath>..\packages\SkiaSharp.2.88.3\lib\net462\SkiaSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Spire.Pdf, Version=9.5.4.0, Culture=neutral, PublicKeyToken=663f351905198cb3, processorArchitecture=MSIL">
+      <HintPath>..\packages\Spire.PDF.9.5.4\lib\net40\Spire.Pdf.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Drawing.Common, Version=4.0.0.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Drawing.Common.5.0.3\lib\net461\System.Drawing.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.4\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="zxing, Version=0.16.8.0, Culture=neutral, PublicKeyToken=4e88037ac681fe60, processorArchitecture=MSIL">
+      <HintPath>..\packages\ZXing.Net.0.16.8\lib\net45\zxing.dll</HintPath>
+    </Reference>
+    <Reference Include="zxing.presentation, Version=0.16.8.0, Culture=neutral, PublicKeyToken=4e88037ac681fe60, processorArchitecture=MSIL">
+      <HintPath>..\packages\ZXing.Net.0.16.8\lib\net45\zxing.presentation.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AccMain.Designer.cs">
+      <DependentUpon>AccMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="accounting.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>accounting.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Config\SysSettingControl.cs" />
+    <Compile Include="Controls\AddQueryDataForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\AddQueryDataForm.Designer.cs">
+      <DependentUpon>AddQueryDataForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\DlgFrmImg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\DlgFrmImg.Designer.cs">
+      <DependentUpon>DlgFrmImg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Dlg\AssetsCostInfoDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\Dlg\AssetsCostInfoDlg.Designer.cs">
+      <DependentUpon>AssetsCostInfoDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Dlg\AssetsDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\Dlg\AssetsDlg.Designer.cs">
+      <DependentUpon>AssetsDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Dlg\CompanyDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\Dlg\CompanyDlg.Designer.cs">
+      <DependentUpon>CompanyDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Dlg\UserDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\Dlg\UserDlg.designer.cs">
+      <DependentUpon>UserDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\DoubleTablesControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\DoubleTablesControl.Designer.cs">
+      <DependentUpon>DoubleTablesControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\FrmDataMaintain.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\FrmDataMaintain.Designer.cs">
+      <DependentUpon>FrmDataMaintain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\MasterUI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\MasterUI.Designer.cs">
+      <DependentUpon>MasterUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\MasterUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\MasterUserControl.Designer.cs">
+      <DependentUpon>MasterUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\UpdateFrm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\UpdateFrm.Designer.cs">
+      <DependentUpon>UpdateFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\UpdateListForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\UpdateListForm.Designer.cs">
+      <DependentUpon>UpdateListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\usrAccForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\usrAccForm.Designer.cs">
+      <DependentUpon>usrAccForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCaption.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FormCaption.resx</DependentUpon>
+    </Compile>
+    <Compile Include="FrmControl\Assets\Dlg\FrmAssetsModify.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmControl\Assets\Dlg\FrmAssetsModify.Designer.cs">
+      <DependentUpon>FrmAssetsModify.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmControl\Assets\FrmAssetsMgt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmControl\Assets\FrmAssetsMgt.Designer.cs">
+      <DependentUpon>FrmAssetsMgt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmControl\Assets\FrmAssetsSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmControl\Assets\FrmAssetsSetting.Designer.cs">
+      <DependentUpon>FrmAssetsSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmControl\Assets\FrmAssetsView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmControl\Assets\FrmAssetsView.Designer.cs">
+      <DependentUpon>FrmAssetsView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmControl\Assets\FrmCostView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmControl\Assets\FrmCostView.Designer.cs">
+      <DependentUpon>FrmCostView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmControl\Business\Accounts\FrmPayMgt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmControl\Business\Accounts\FrmPayMgt.Designer.cs">
+      <DependentUpon>FrmPayMgt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmControl\Business\Accounts\FrmPayPaper.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmControl\Business\Accounts\FrmPayPaper.Designer.cs">
+      <DependentUpon>FrmPayPaper.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmControl\Business\Accounts\FrmPayTicketMgt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmControl\Business\Accounts\FrmPayTicketMgt.Designer.cs">
+      <DependentUpon>FrmPayTicketMgt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmControl\Business\Accounts\FrmPayTicketPaper.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmControl\Business\Accounts\FrmPayTicketPaper.Designer.cs">
+      <DependentUpon>FrmPayTicketPaper.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmControl\Business\Accounts\FrmPayTicketUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmControl\Business\Accounts\FrmPayTicketUpdate.Designer.cs">
+      <DependentUpon>FrmPayTicketUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmControl\Business\Accounts\FrmPayUpdatePaper.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmControl\Business\Accounts\FrmPayUpdatePaper.Designer.cs">
+      <DependentUpon>FrmPayUpdatePaper.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmControl\Business\Accounts\FrmRecMgt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmControl\Business\Accounts\FrmRecMgt.Designer.cs">
+      <DependentUpon>FrmRecMgt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmControl\Business\Accounts\FrmRecPaper.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmControl\Business\Accounts\FrmRecPaper.Designer.cs">
+      <DependentUpon>FrmRecPaper.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmControl\Business\Accounts\FrmRecTicketMgt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmControl\Business\Accounts\FrmRecTicketMgt.Designer.cs">
+      <DependentUpon>FrmRecTicketMgt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmControl\Business\Accounts\FrmRecTicketPaper.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmControl\Business\Accounts\FrmRecTicketPaper.Designer.cs">
+      <DependentUpon>FrmRecTicketPaper.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmControl\Business\Accounts\FrmRecTicketUpdatePaper.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmControl\Business\Accounts\FrmRecTicketUpdatePaper.Designer.cs">
+      <DependentUpon>FrmRecTicketUpdatePaper.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmControl\Business\Accounts\FrmRecUpdatePaper.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmControl\Business\Accounts\FrmRecUpdatePaper.Designer.cs">
+      <DependentUpon>FrmRecUpdatePaper.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmControl\Business\Accounts\VerifyForm\FrmPayVerifyMgt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmControl\Business\Accounts\VerifyForm\FrmPayVerifyMgt.Designer.cs">
+      <DependentUpon>FrmPayVerifyMgt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmControl\Business\Accounts\VerifyForm\FrmPayTicketVerifyMgt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmControl\Business\Accounts\VerifyForm\FrmPayTicketVerifyMgt.Designer.cs">
+      <DependentUpon>FrmPayTicketVerifyMgt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmControl\Business\Accounts\VerifyForm\FrmRecVerifyMgt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmControl\Business\Accounts\VerifyForm\FrmRecVerifyMgt.Designer.cs">
+      <DependentUpon>FrmRecVerifyMgt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmControl\Business\Accounts\VerifyForm\FrmRecTicketVerifyMgt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmControl\Business\Accounts\VerifyForm\FrmRecTicketVerifyMgt.Designer.cs">
+      <DependentUpon>FrmRecTicketVerifyMgt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmControl\Business\CompanyMgt\FrmCompany.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmControl\Business\CompanyMgt\FrmCompany.Designer.cs">
+      <DependentUpon>FrmCompany.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmControl\Business\CompanyMgt\FrmCompanyUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmControl\Business\CompanyMgt\FrmCompanyUpdate.Designer.cs">
+      <DependentUpon>FrmCompanyUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmControl\Business\Dialog\PassDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmControl\Business\Dialog\PassDlg.Designer.cs">
+      <DependentUpon>PassDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmControl\Business\Dialog\ResturantDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmControl\Business\Dialog\ResturantDlg.Designer.cs">
+      <DependentUpon>ResturantDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmControl\Business\FrmAboutLicense.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmControl\Business\FrmAboutLicense.designer.cs">
+      <DependentUpon>FrmAboutLicense.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmControl\Business\FrmBusinessRestaurant.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmControl\Business\FrmBusinessRestaurant.Designer.cs">
+      <DependentUpon>FrmBusinessRestaurant.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmControl\Business\FrmFuncPwrControl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmControl\Business\FrmFuncPwrControl.Designer.cs">
+      <DependentUpon>FrmFuncPwrControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmControl\Business\FrmInvProduce.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmControl\Business\FrmInvProduce.Designer.cs">
+      <DependentUpon>FrmInvProduce.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmControl\Business\FrmOftenWords.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmControl\Business\FrmOftenWords.Designer.cs">
+      <DependentUpon>FrmOftenWords.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmControl\Business\FrmPowerSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmControl\Business\FrmPowerSetting.designer.cs">
+      <DependentUpon>FrmPowerSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmControl\Business\FrmRestaurantFood.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmControl\Business\FrmRestaurantFood.Designer.cs">
+      <DependentUpon>FrmRestaurantFood.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmControl\Business\FrmSupplyMgt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmControl\Business\FrmSupplyMgt.Designer.cs">
+      <DependentUpon>FrmSupplyMgt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmControl\Business\Report\FrmProductRpt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmControl\Business\Report\FrmProductRpt.Designer.cs">
+      <DependentUpon>FrmProductRpt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmControl\Business\SN\FrmRegister.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmControl\Business\SN\FrmRegister.Designer.cs">
+      <DependentUpon>FrmRegister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmControl\Business\YearIntegration\FrmYearIntegration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmControl\Business\YearIntegration\FrmYearIntegration.Designer.cs">
+      <DependentUpon>FrmYearIntegration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmControl\DataForm\FrmDataTotalSum.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmControl\DataForm\FrmDataTotalSum.Designer.cs">
+      <DependentUpon>FrmDataTotalSum.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmControl\DataForm\FrmDetailData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmControl\DataForm\FrmDetailData.Designer.cs">
+      <DependentUpon>FrmDetailData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmControl\FrmAccountingData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmControl\FrmAccountingData.Designer.cs">
+      <DependentUpon>FrmAccountingData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmControl\FrmAffairs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmControl\FrmAffairs.Designer.cs">
+      <DependentUpon>FrmAffairs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmControl\Invoice\DBManagement\FrmDataForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmControl\Invoice\DBManagement\FrmDataForm.designer.cs">
+      <DependentUpon>FrmDataForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmControl\Invoice\DBManagement\FrmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmControl\Invoice\DBManagement\FrmMain.designer.cs">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmControl\Invoice\DBManagement\FrmPDFConvertJPG.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmControl\Invoice\DBManagement\FrmPDFConvertJPG.designer.cs">
+      <DependentUpon>FrmPDFConvertJPG.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmControl\Invoice\DBManagement\Models\ClassModel.cs" />
+    <Compile Include="FrmControl\Invoice\DBManagement\VModel\VJin035.cs" />
+    <Compile Include="FrmControl\Setting\FrmAffairsAccountingControl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmControl\Setting\FrmAffairsAccountingControl.Designer.cs">
+      <DependentUpon>FrmAffairsAccountingControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmControl\Setting\FrmAffairsAccountSetup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmControl\Setting\FrmAffairsAccountSetup.Designer.cs">
+      <DependentUpon>FrmAffairsAccountSetup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmControl\Setting\FrmAffairsSetupSingleForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmControl\Setting\FrmAffairsSetupSingleForm.Designer.cs">
+      <DependentUpon>FrmAffairsSetupSingleForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmControl\Business\FrmAmountSettle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmControl\Business\FrmAmountSettle.Designer.cs">
+      <DependentUpon>FrmAmountSettle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmControl\Business\FrmBookConvert.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmControl\Business\FrmBookConvert.Designer.cs">
+      <DependentUpon>FrmBookConvert.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmControl\FrmAcountsInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmControl\FrmAcountsInfo.Designer.cs">
+      <DependentUpon>FrmAcountsInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmControl\Business\FrmDiaryBook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmControl\Business\FrmDiaryBook.Designer.cs">
+      <DependentUpon>FrmDiaryBook.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmControl\Verify\FrmAccountingEntryManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmControl\Verify\FrmAccountingEntryManager.Designer.cs">
+      <DependentUpon>FrmAccountingEntryManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmControl\Business\FrmDiaryVerify.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmControl\Business\FrmDiaryVerify.Designer.cs">
+      <DependentUpon>FrmDiaryVerify.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmControl\Verify\FrmEntryVerify.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmControl\Verify\FrmEntryVerify.Designer.cs">
+      <DependentUpon>FrmEntryVerify.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmControl\Report\FrmFinanceBalanceRpt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmControl\Report\FrmFinanceBalanceRpt.Designer.cs">
+      <DependentUpon>FrmFinanceBalanceRpt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmControl\Report\FrmIncomeStatmentRpt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmControl\Report\FrmIncomeStatmentRpt.Designer.cs">
+      <DependentUpon>FrmIncomeStatmentRpt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmControl\Business\FrmInvManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmControl\Business\FrmInvManager.Designer.cs">
+      <DependentUpon>FrmInvManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmControl\Setting\FrmOftenNames.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmControl\Setting\FrmOftenNames.Designer.cs">
+      <DependentUpon>FrmOftenNames.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmControl\Business\FrmSysBookExport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmControl\Business\FrmSysBookExport.Designer.cs">
+      <DependentUpon>FrmSysBookExport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmControl\Business\FrmSysLedgerMgt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmControl\Business\FrmSysLedgerMgt.Designer.cs">
+      <DependentUpon>FrmSysLedgerMgt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmControl\Invoice\FrmInvoiceMgt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmControl\Invoice\FrmInvoiceMgt.Designer.cs">
+      <DependentUpon>FrmInvoiceMgt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmControl\Invoice\FrmInvScan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmControl\Invoice\FrmInvScan.Designer.cs">
+      <DependentUpon>FrmInvScan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmControl\Invoice\FrmOftenAccData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmControl\Invoice\FrmOftenAccData.Designer.cs">
+      <DependentUpon>FrmOftenAccData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmControl\Report\FrmDetailReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmControl\Report\FrmDetailReport.Designer.cs">
+      <DependentUpon>FrmDetailReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmControl\Verify\FrmVerifyItemForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmControl\Verify\FrmVerifyItemForm.Designer.cs">
+      <DependentUpon>FrmVerifyItemForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMenu.Designer.cs">
+      <DependentUpon>FrmMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inc\Form3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inc\Form3.Designer.cs">
+      <DependentUpon>Form3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InvControlData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InvControlData.Designer.cs">
+      <DependentUpon>InvControlData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AccountingData\AccCostLedgerModelView.cs" />
+    <Compile Include="Models\Affairs\AffairsAccountModel.cs" />
+    <Compile Include="Models\Business\FoodModel.cs" />
+    <Compile Include="Models\Business\OrderDetailModel.cs" />
+    <Compile Include="Models\Business\RestaurantModel.cs" />
+    <Compile Include="Models\ChkVModel.cs" />
+    <Compile Include="Models\Config\PathModel.cs" />
+    <Compile Include="Models\DataGridViewModel\AccEntryMgtVModel.cs" />
+    <Compile Include="Models\DataGridViewModel\AccIdsGVItems.cs" />
+    <Compile Include="Models\DataGridViewModel\AccidsVierfyGridViewItem.cs" />
+    <Compile Include="Models\DataGridViewModel\CountryTaxReport\DetailReportGridViewItems.cs" />
+    <Compile Include="Models\DataGridViewModel\VerifyConfirmGridViewModel.cs" />
+    <Compile Include="Models\Models\YearIntegrationModel.cs" />
+    <Compile Include="Models\UControl\MDForm\DetailModel.cs" />
+    <Compile Include="Models\UControl\MDForm\MasterModel.cs" />
+    <Compile Include="Models\VerifyModel\VerifyAccMonthRptModel.cs" />
+    <Compile Include="RegisterForm\FrmSysData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegisterForm\FrmSysData.designer.cs">
+      <DependentUpon>FrmSysData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RegisterForm\GetSNFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegisterForm\GetSNFrm.designer.cs">
+      <DependentUpon>GetSNFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RegisterForm\PassMgt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegisterForm\PassMgt.designer.cs">
+      <DependentUpon>PassMgt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Diary.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Diary.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Financefrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Financefrm.Designer.cs">
+      <DependentUpon>Financefrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmControl\Setting\FrmSysSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmControl\Setting\FrmSysSetting.Designer.cs">
+      <DependentUpon>FrmSysSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImportDataFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImportDataFrm.Designer.cs">
+      <DependentUpon>ImportDataFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inc\AddQueryInc.cs" />
+    <Compile Include="Models\AccBookModel.cs" />
+    <Compile Include="Models\AccBookModelView.cs" />
+    <Compile Include="Models\AccCostVerify.cs" />
+    <Compile Include="Models\AccLedgerBook.cs" />
+    <Compile Include="Models\Accounts\AccNameLink.cs" />
+    <Compile Include="Models\Accounts\DiaryDefaultModel.cs" />
+    <Compile Include="Models\Accounts\DiaryModel.cs" />
+    <Compile Include="Models\AddQueryDataForm\Acc_IDCompareList.cs" />
+    <Compile Include="Models\AddQueryDataForm\Acc_NoCompareList.cs" />
+    <Compile Include="Models\AddQueryDataForm\Acc_VerifyItemFlow.cs" />
+    <Compile Include="Models\AddQueryDataForm\VerifyMonthCompareList.cs" />
+    <Compile Include="Models\AddQueryDataForm\VerifyItemGVModelConfig.cs" />
+    <Compile Include="Models\Assets\AssetsGridView.cs" />
+    <Compile Include="Models\Config\AccClass.cs" />
+    <Compile Include="Models\Config\AccInputPosModel.cs" />
+    <Compile Include="Models\Config\AccVoiceSetting.cs" />
+    <Compile Include="Models\Config\Acc_CostItemCols.cs" />
+    <Compile Include="Models\Config\ClassTypeConfig.cs" />
+    <Compile Include="Models\Config\CostItemMoneyGridView.cs" />
+    <Compile Include="Models\Config\coststatus.cs" />
+    <Compile Include="Models\Config\UpdataeForm\DiaryConfig.cs" />
+    <Compile Include="Models\Config\UpdataeForm\FormConfig.cs" />
+    <Compile Include="Models\CostDataModel.cs" />
+    <Compile Include="Models\DataGridViewModel\AccAccountsGridViewItems.cs" />
+    <Compile Include="Models\DataGridViewModel\AccCostLedgerGridViewItems.cs" />
+    <Compile Include="Models\DataGridViewModel\AccNoDataGridViewItems.cs" />
+    <Compile Include="Models\DataGridViewModel\AccoutnEntriesGridViewItem.cs" />
+    <Compile Include="Models\DataGridViewModel\AssetsCostDataGridView.cs" />
+    <Compile Include="Models\DataGridViewModel\Financial\BalanceSheetGridViewItems.cs" />
+    <Compile Include="Models\DataGridViewModel\Financial\Financial_IncomeGridViewItems.cs" />
+    <Compile Include="Models\FormMaintain\AssetsGridViewConfig.cs" />
+    <Compile Include="Models\FormMaintain\FinanceGridViewItems.cs" />
+    <Compile Include="Models\Invoice_ContractAddModel.cs" />
+    <Compile Include="Models\Invoice_ContractModel.cs" />
+    <Compile Include="Models\Log\LogControl.cs" />
+    <Compile Include="Models\UControl\AccBookParams.cs" />
+    <Compile Include="Models\UControl\DataParams.cs" />
+    <Compile Include="Models\UpdateForm\ConditionClass.cs" />
+    <Compile Include="Models\UpdateForm\ImportActions.cs" />
+    <Compile Include="Models\UpdateForm\SalaryGirdFrm.cs" />
+    <Compile Include="Models\UpdateForm\UpdateFormEnum.cs" />
+    <Compile Include="Models\UpdateForm\UpdateSalaryCols.cs" />
+    <Compile Include="Models\VarClass.cs" />
+    <Compile Include="Models\VerifyModel\VerifyCostDataModel.cs" />
+    <Compile Include="Models\VerifyModel\VerifyCostFinancialModel.cs" />
+    <Compile Include="Resources\MsgText.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MsgText.resx</DependentUpon>
+    </Compile>
+    <Compile Include="SNForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SNForm.Designer.cs">
+      <DependentUpon>SNForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Testing\TestFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Testing\TestFrm.Designer.cs">
+      <DependentUpon>TestFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewFrm\AffairsFormDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewFrm\AffairsFormDlg.Designer.cs">
+      <DependentUpon>AffairsFormDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewFrm\DiaryAccAcountFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewFrm\DiaryAccAcountFrm.Designer.cs">
+      <DependentUpon>DiaryAccAcountFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewFrm\ModifyDataFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewFrm\ModifyDataFrm.Designer.cs">
+      <DependentUpon>ModifyDataFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewFrm\SalaryFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewFrm\SalaryFrm.Designer.cs">
+      <DependentUpon>SalaryFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewFrm\SalaryFrm01.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewFrm\SalaryFrm01.Designer.cs">
+      <DependentUpon>SalaryFrm01.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VModel\AccAddQueryFormBase.cs" />
+    <Compile Include="VModel\AccBookVModel.cs" />
+    <Compile Include="Models\AccExportType.cs" />
+    <Compile Include="Models\QueryClass.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="VModel\AccInvoiceBookVModel.cs" />
+    <Compile Include="VModel\AccLedgerAccount.cs" />
+    <Compile Include="VModel\Accounts\AccountRemainData.cs" />
+    <Compile Include="VModel\Accounts\DiaryAccounts.cs" />
+    <Compile Include="VModel\AddQueryDataForm\Acc_AssetsCtl.cs" />
+    <Compile Include="VModel\AddQueryDataForm\Acc_CostItemView.cs" />
+    <Compile Include="VModel\AddQueryDataForm\Acc_VerifyItemCtl.cs" />
+    <Compile Include="VModel\AddQueryDataForm\Acc_VerifyItemView.cs" />
+    <Compile Include="VModel\AddQueryDataForm\AddQueryDataBase.cs" />
+    <Compile Include="VModel\AddQueryForm\Acc_CostCompareUpdate.cs" />
+    <Compile Include="VModel\AddQueryForm\Acc_InvoiceCostCTL.cs" />
+    <Compile Include="VModel\Acc_CostDataVModel.cs" />
+    <Compile Include="VModel\AddQueryForm\Acc_CostDataQuery.cs" />
+    <Compile Include="VModel\AddQueryForm\Acc_VModel.cs" />
+    <Compile Include="VModel\AddQueryForm\AddQueryAutoDelete.cs" />
+    <Compile Include="VModel\AddQueryForm\QueryFrmString.cs" />
+    <Compile Include="VModel\Affairs\affairvmodelctl.cs" />
+    <Compile Include="VModel\Affairs\FormVmodel.cs" />
+    <Compile Include="VModel\Affairs\GridViewQueryAffairs.cs" />
+    <Compile Include="VModel\BookCompute.cs" />
+    <Compile Include="VModel\BookConvert2.cs" />
+    <Compile Include="Models\Assets\Jin051Model.cs" />
+    <Compile Include="VModel\Business\BusiDataModelControl.cs" />
+    <Compile Include="VModel\Business\BusinessCtl.cs" />
+    <Compile Include="VModel\Business\LicenseVModel.cs" />
+    <Compile Include="VModel\Business\FinancialRptVModel.cs" />
+    <Compile Include="VModel\Business\VAcc_Words.cs" />
+    <Compile Include="VModel\Business\VRestaurantFood.cs" />
+    <Compile Include="VModel\Conrols\GridView\AccAccountsGridView.cs" />
+    <Compile Include="VModel\Conrols\GridView\AccCostLedgerGridView.cs" />
+    <Compile Include="VModel\Conrols\GridView\AccIdsGridViewItems.cs" />
+    <Compile Include="VModel\Conrols\GridView\AccLedgerGridView.cs" />
+    <Compile Include="VModel\Conrols\GridView\AccNoGridView.cs" />
+    <Compile Include="VModel\Conrols\GridView\AccoutnEntriesGridView.cs" />
+    <Compile Include="VModel\Conrols\GridView\Acc_Affairs_DGItems.cs" />
+    <Compile Include="VModel\Conrols\GridView\Acc_BookDesc_DGItem.cs" />
+    <Compile Include="VModel\Conrols\GridView\Acc_DiaryFoods_DGItems.cs" />
+    <Compile Include="VModel\Conrols\GridView\Acc_OfftenWords_DGItem.cs" />
+    <Compile Include="VModel\Conrols\GridView\Acc_Product_DGItems.cs" />
+    <Compile Include="VModel\Conrols\GridView\AssetsCostGridView.cs" />
+    <Compile Include="VModel\Conrols\GridView\BalanceSheetGridView.cs" />
+    <Compile Include="Models\DataGridViewModel\DiffCompareGridViewItem.cs" />
+    <Compile Include="VModel\Conrols\GridView\DiffCompareGridView.cs" />
+    <Compile Include="VModel\Conrols\GridView\Financial_IncomedgGridView.cs" />
+    <Compile Include="VModel\Conrols\ManageForm\FormControlVModel.cs" />
+    <Compile Include="VModel\Conrols\ManageForm\MDControlVModel.cs" />
+    <Compile Include="VModel\Conrols\Model\GridViewConfigBase.cs" />
+    <Compile Include="VModel\Conrols\Model\GridViewControl.cs" />
+    <Compile Include="VModel\Conrols\Model\VerifyAccGridView.cs" />
+    <Compile Include="Models\UpdateForm\SalaryGridView.cs" />
+    <Compile Include="VModel\Conrols\QueryModel\GridViewQueryVModel.cs" />
+    <Compile Include="VModel\Conrols\VModel\VerifyAccGridViewVModel.cs" />
+    <Compile Include="VModel\DBClassCtl.cs" />
+    <Compile Include="VModel\DiaryInfo\DiaryBookVModel.cs" />
+    <Compile Include="VModel\FileExport\ExcelFileManager.cs" />
+    <Compile Include="VModel\Finicial\FunctionViewModel.cs" />
+    <Compile Include="VModel\FormMaintain\Acc_Financial_BalanceCtl.cs" />
+    <Compile Include="VModel\FormMaintain\Acc_Financial_IncomeCtl.cs" />
+    <Compile Include="VModel\FormMaintain\FormControlVModel.cs" />
+    <Compile Include="VModel\Invoice_ContrctCtl.cs" />
+    <Compile Include="VModel\MoneyVModel.cs" />
+    <Compile Include="VModel\Money\MoneyVerifyClass.cs" />
+    <Compile Include="VModel\PlayerRound\PlayVModel.cs" />
+    <Compile Include="VModel\PrivilegeControl.cs" />
+    <Compile Include="VModel\SN\TableFrmNo.cs" />
+    <Compile Include="VModel\TPViewer\InvoiceVModel.cs" />
+    <Compile Include="VModel\UpdateListForm\Acc_UpdateLstFrm.cs" />
+    <Compile Include="VModel\UsrControl\UpdateFormVModel.cs" />
+    <Content Include="Audio\again.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Audio\beep.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Config\moneyproduct.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="imgs\Invoice\01-02月--WE-34221527.jpeg" />
+    <Content Include="imgs\Invoice\0102--WN74789453.jpeg" />
+    <Content Include="imgs\Invoice\0109--WZ70171031.jpeg" />
+    <Content Include="imgs\Invoice\0120--WZ75365212.jpeg" />
+    <Content Include="imgs\Invoice\02-04--XB-63089593.jpeg" />
+    <Content Include="imgs\Invoice\0202--WN74797585.jpeg" />
+    <Content Include="imgs\Invoice\0210--WZ81849618.jpeg" />
+    <Content Include="imgs\Invoice\0214--WZ8325254707.jpeg" />
+    <Content Include="imgs\Invoice\0223--WZ8779914308.jpeg" />
+    <Content Include="imgs\Invoice\0223--WZ88003573.jpeg" />
+    <Content Include="imgs\Invoice\0223--WZ8800357309.jpeg" />
+    <Content Include="imgs\Invoice\0224--WZ88443770.jpeg" />
+    <Content Include="imgs\Invoice\0225--XB-63504324.jpeg" />
+    <Content Include="imgs\Invoice\03-02--YQ74789131.jpeg" />
+    <Content Include="imgs\Invoice\0301--ZC32158950.jpeg" />
+    <Content Include="imgs\Invoice\0302--YQ74789131.jpeg" />
+    <Content Include="imgs\Invoice\04-02--YQ74798325.jpeg" />
+    <Content Include="imgs\Invoice\05-02--AV74788945.jpeg" />
+    <Content Include="imgs\Invoice\05-06月--AM-34172010.jpeg" />
+    <Content Include="imgs\Invoice\0602-AV-74798168.jpeg" />
+    <Content Include="imgs\Invoice\07-08月--CM-34219539.jpeg" />
+    <Content Include="imgs\Invoice\0702--CV74789138.jpeg" />
+    <Content Include="imgs\Invoice\09-10月--AM-34172010.jpeg" />
+    <Content Include="imgs\Invoice\09-10月--AV-74788945.jpeg" />
+    <Content Include="imgs\Invoice\09-10月--AV-74798168.jpeg" />
+    <Content Include="imgs\Invoice\09-10月--CM-34219539.jpeg" />
+    <Content Include="imgs\Invoice\09-10月--CM-74789138.jpeg" />
+    <Content Include="imgs\Invoice\09-10月--CM-74798152.jpeg" />
+    <Content Include="imgs\Invoice\09-10月--EX-74788898.jpeg" />
+    <Content Include="imgs\Invoice\09-10月--EX-74798218.jpeg" />
+    <Content Include="imgs\Invoice\09-10月--EX74788898.jpeg" />
+    <Content Include="imgs\Invoice\09-10月--EX74798218.jpeg" />
+    <Content Include="imgs\Invoice\09-10月--WE-34221527.jpeg" />
+    <Content Include="imgs\Invoice\09-10月--WN-74789453.jpeg" />
+    <Content Include="imgs\Invoice\09-10月--WN-74797585.jpeg" />
+    <Content Include="imgs\Invoice\09-10月--YQ-74789131.jpeg" />
+    <Content Include="imgs\Invoice\09-10月--YQ-74798325.jpeg" />
+    <Content Include="imgs\Invoice\11-12月--BJ51896614.jpeg" />
+    <Content Include="imgs\Invoice\11-12月--CY-99351147.jpeg" />
+    <Content Include="imgs\Invoice\11-12月--DH42076474.jpeg" />
+    <Content Include="imgs\Invoice\11-12月--DH42085671.jpeg" />
+    <Content Include="imgs\Invoice\11-12月--DH42632426.jpeg" />
+    <Content Include="imgs\Invoice\11-12月--DH42692620.jpeg" />
+    <Content Include="imgs\Invoice\11-12月--DH53980421.jpeg" />
+    <Content Include="imgs\Invoice\11-12月--FK69052697.jpeg" />
+    <Content Include="imgs\Invoice\11-12月--FK69782982.jpeg" />
+    <Content Include="imgs\Invoice\11-12月--FK72038326.jpeg" />
+    <Content Include="imgs\Invoice\11-12月--FK72652438.jpeg" />
+    <Content Include="imgs\Invoice\11-12月--FK72970242.jpeg" />
+    <Content Include="imgs\Invoice\11-12月--FK73126215.jpeg" />
+    <Content Include="imgs\Invoice\11-12月--FK75135960.jpeg" />
+    <Content Include="imgs\Invoice\11-12月--FK75716931.jpeg" />
+    <Content Include="imgs\Invoice\11-12月--FK81147445.jpeg" />
+    <Content Include="imgs\Invoice\11-12月--FK81504075.jpeg" />
+    <Content Include="imgs\Invoice\11-12月--FK82475552.jpeg" />
+    <Content Include="imgs\Invoice\11-12月--FK82774807.jpeg" />
+    <Content Include="imgs\Invoice\11-12月--FK85339757.jpeg" />
+    <Content Include="imgs\Invoice\11-12月--FK85612118.jpeg" />
+    <Content Include="imgs\Invoice\11-12月--GR-34177202.jpeg" />
+    <Content Include="imgs\Invoice\11-12月--GZ-74788862.jpeg" />
+    <Content Include="imgs\Invoice\11-12月--GZ-74798599.jpeg" />
+    <Content Include="imgs\Invoice\11-12月--GZ74788862.jpeg" />
+    <Content Include="imgs\Invoice\11-12月--GZ74798599.jpeg" />
+    <Content Include="imgs\Invoice\11-12月--HM71325568.jpeg" />
+    <Content Include="imgs\Invoice\11-12月--HM71567176.jpeg" />
+    <Content Include="imgs\Invoice\11-12月--HM74130477.jpeg" />
+    <Content Include="imgs\Invoice\11-12月--HM75876135.jpeg" />
+    <Content Include="imgs\Invoice\11-12月--HM86188291.jpeg" />
+    <Content Include="imgs\Invoice\11-12月--HM86668055.jpeg" />
+    <Content Include="imgs\Invoice\11-12月--HM87017371.jpeg" />
+    <Content Include="imgs\Invoice\11-12月--HM88581512.jpeg" />
+    <Content Include="imgs\Invoice\11-25--UG-35581468.jpeg" />
+    <Content Include="imgs\Invoice\11-26--UJ-46308333.jpeg" />
+    <Content Include="imgs\Invoice\4月份--YQ74798325.jpeg" />
+    <Content Include="imgs\Invoice\5月份--AV-74788945.jpeg" />
+    <Content Include="imgs\Invoice\8月份--CV74798152.jpeg" />
+    <Content Include="Libaries\AForge.Controls.dll" />
+    <Content Include="Libaries\AForge.dll" />
+    <Content Include="Libaries\JINSHINVision.dll" />
+    <Content Include="readme.txt" />
+    <Content Include="TextTemplate1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>TextTemplate1.txt</LastGenOutput>
+    </Content>
+    <Content Include="TextTemplate1.txt">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TextTemplate1.tt</DependentUpon>
+    </Content>
+    <Content Include="UpdateLog.txt" />
+    <EmbeddedResource Include="AccMain.resx">
+      <DependentUpon>AccMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="accounting.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>accounting.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\AddQueryDataForm.resx">
+      <DependentUpon>AddQueryDataForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\DlgFrmImg.resx">
+      <DependentUpon>DlgFrmImg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Dlg\AssetsCostInfoDlg.resx">
+      <DependentUpon>AssetsCostInfoDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Dlg\AssetsDlg.resx">
+      <DependentUpon>AssetsDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Dlg\CompanyDlg.resx">
+      <DependentUpon>CompanyDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Dlg\UserDlg.resx">
+      <DependentUpon>UserDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\DoubleTablesControl.resx">
+      <DependentUpon>DoubleTablesControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\FrmDataMaintain.resx">
+      <DependentUpon>FrmDataMaintain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\MasterUI.resx">
+      <DependentUpon>MasterUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\MasterUserControl.resx">
+      <DependentUpon>MasterUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\UpdateFrm.resx">
+      <DependentUpon>UpdateFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\UpdateListForm.resx">
+      <DependentUpon>UpdateListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\usrAccForm.resx">
+      <DependentUpon>usrAccForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Financefrm.resx">
+      <DependentUpon>Financefrm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCaption.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>FormCaption.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmControl\Assets\Dlg\FrmAssetsModify.resx">
+      <DependentUpon>FrmAssetsModify.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmControl\Assets\FrmAssetsMgt.resx">
+      <DependentUpon>FrmAssetsMgt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmControl\Assets\FrmAssetsSetting.resx">
+      <DependentUpon>FrmAssetsSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmControl\Assets\FrmAssetsView.resx">
+      <DependentUpon>FrmAssetsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmControl\Assets\FrmCostView.resx">
+      <DependentUpon>FrmCostView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmControl\Business\Accounts\FrmPayMgt.resx">
+      <DependentUpon>FrmPayMgt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmControl\Business\Accounts\FrmPayPaper.resx">
+      <DependentUpon>FrmPayPaper.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmControl\Business\Accounts\FrmPayTicketMgt.resx">
+      <DependentUpon>FrmPayTicketMgt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmControl\Business\Accounts\FrmPayTicketPaper.resx">
+      <DependentUpon>FrmPayTicketPaper.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmControl\Business\Accounts\FrmPayTicketUpdate.resx">
+      <DependentUpon>FrmPayTicketUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmControl\Business\Accounts\FrmPayUpdatePaper.resx">
+      <DependentUpon>FrmPayUpdatePaper.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmControl\Business\Accounts\FrmRecMgt.resx">
+      <DependentUpon>FrmRecMgt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmControl\Business\Accounts\FrmRecPaper.resx">
+      <DependentUpon>FrmRecPaper.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmControl\Business\Accounts\FrmRecTicketMgt.resx">
+      <DependentUpon>FrmRecTicketMgt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmControl\Business\Accounts\FrmRecTicketPaper.resx">
+      <DependentUpon>FrmRecTicketPaper.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmControl\Business\Accounts\FrmRecTicketUpdatePaper.resx">
+      <DependentUpon>FrmRecTicketUpdatePaper.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmControl\Business\Accounts\FrmRecUpdatePaper.resx">
+      <DependentUpon>FrmRecUpdatePaper.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmControl\Business\Accounts\VerifyForm\FrmPayVerifyMgt.resx">
+      <DependentUpon>FrmPayVerifyMgt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmControl\Business\Accounts\VerifyForm\FrmPayTicketVerifyMgt.resx">
+      <DependentUpon>FrmPayTicketVerifyMgt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmControl\Business\Accounts\VerifyForm\FrmRecVerifyMgt.resx">
+      <DependentUpon>FrmRecVerifyMgt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmControl\Business\Accounts\VerifyForm\FrmRecTicketVerifyMgt.resx">
+      <DependentUpon>FrmRecTicketVerifyMgt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmControl\Business\CompanyMgt\FrmCompany.resx">
+      <DependentUpon>FrmCompany.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmControl\Business\CompanyMgt\FrmCompanyUpdate.resx">
+      <DependentUpon>FrmCompanyUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmControl\Business\Dialog\PassDlg.resx">
+      <DependentUpon>PassDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmControl\Business\Dialog\ResturantDlg.resx">
+      <DependentUpon>ResturantDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmControl\Business\FrmAboutLicense.resx">
+      <DependentUpon>FrmAboutLicense.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmControl\Business\FrmBusinessRestaurant.resx">
+      <DependentUpon>FrmBusinessRestaurant.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmControl\Business\FrmFuncPwrControl.resx">
+      <DependentUpon>FrmFuncPwrControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmControl\Business\FrmInvProduce.resx">
+      <DependentUpon>FrmInvProduce.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmControl\Business\FrmOftenWords.resx">
+      <DependentUpon>FrmOftenWords.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmControl\Business\FrmPowerSetting.resx">
+      <DependentUpon>FrmPowerSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmControl\Business\FrmRestaurantFood.resx">
+      <DependentUpon>FrmRestaurantFood.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmControl\Business\FrmSupplyMgt.resx">
+      <DependentUpon>FrmSupplyMgt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmControl\Business\Report\FrmProductRpt.resx">
+      <DependentUpon>FrmProductRpt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmControl\Business\SN\FrmRegister.resx">
+      <DependentUpon>FrmRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmControl\Business\YearIntegration\FrmYearIntegration.resx">
+      <DependentUpon>FrmYearIntegration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmControl\DataForm\FrmDataTotalSum.resx">
+      <DependentUpon>FrmDataTotalSum.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmControl\DataForm\FrmDetailData.resx">
+      <DependentUpon>FrmDetailData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmControl\FrmAccountingData.resx">
+      <DependentUpon>FrmAccountingData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmControl\FrmAcountsInfo.resx">
+      <DependentUpon>FrmAcountsInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmControl\FrmAffairs.resx">
+      <DependentUpon>FrmAffairs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmControl\Invoice\DBManagement\FrmDataForm.resx">
+      <DependentUpon>FrmDataForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmControl\Invoice\DBManagement\FrmMain.resx">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmControl\Invoice\DBManagement\FrmPDFConvertJPG.resx">
+      <DependentUpon>FrmPDFConvertJPG.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmControl\Setting\FrmAffairsAccountingControl.resx">
+      <DependentUpon>FrmAffairsAccountingControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmControl\Setting\FrmAffairsAccountSetup.resx">
+      <DependentUpon>FrmAffairsAccountSetup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmControl\Setting\FrmAffairsSetupSingleForm.resx">
+      <DependentUpon>FrmAffairsSetupSingleForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmControl\Business\FrmAmountSettle.resx">
+      <DependentUpon>FrmAmountSettle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmControl\Business\FrmBookConvert.resx">
+      <DependentUpon>FrmBookConvert.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmControl\Business\FrmDiaryBook.resx">
+      <DependentUpon>FrmDiaryBook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmControl\Verify\FrmAccountingEntryManager.resx">
+      <DependentUpon>FrmAccountingEntryManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmControl\Business\FrmDiaryVerify.resx">
+      <DependentUpon>FrmDiaryVerify.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmControl\Verify\FrmEntryVerify.resx">
+      <DependentUpon>FrmEntryVerify.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmControl\Report\FrmFinanceBalanceRpt.resx">
+      <DependentUpon>FrmFinanceBalanceRpt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmControl\Report\FrmIncomeStatmentRpt.resx">
+      <DependentUpon>FrmIncomeStatmentRpt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmControl\Business\FrmInvManager.resx">
+      <DependentUpon>FrmInvManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmControl\Setting\FrmOftenNames.resx">
+      <DependentUpon>FrmOftenNames.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmControl\Business\FrmSysBookExport.resx">
+      <DependentUpon>FrmSysBookExport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmControl\Business\FrmSysLedgerMgt.resx">
+      <DependentUpon>FrmSysLedgerMgt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmControl\Setting\FrmSysSetting.resx">
+      <DependentUpon>FrmSysSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmControl\Invoice\FrmInvoiceMgt.resx">
+      <DependentUpon>FrmInvoiceMgt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmControl\Invoice\FrmInvScan.resx">
+      <DependentUpon>FrmInvScan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmControl\Invoice\FrmOftenAccData.resx">
+      <DependentUpon>FrmOftenAccData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmControl\Report\FrmDetailReport.resx">
+      <DependentUpon>FrmDetailReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmControl\Verify\FrmVerifyItemForm.resx">
+      <DependentUpon>FrmVerifyItemForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMenu.resx">
+      <DependentUpon>FrmMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImportDataFrm.resx">
+      <DependentUpon>ImportDataFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inc\Form3.resx">
+      <DependentUpon>Form3.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InvControlData.resx">
+      <DependentUpon>InvControlData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="RegisterForm\FrmSysData.resx">
+      <DependentUpon>FrmSysData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegisterForm\GetSNFrm.resx">
+      <DependentUpon>GetSNFrm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegisterForm\PassMgt.resx">
+      <DependentUpon>PassMgt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\MsgText.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>MsgText.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SNForm.resx">
+      <DependentUpon>SNForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Testing\TestFrm.resx">
+      <DependentUpon>TestFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewFrm\AffairsFormDlg.resx">
+      <DependentUpon>AffairsFormDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewFrm\DiaryAccAcountFrm.resx">
+      <DependentUpon>DiaryAccAcountFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewFrm\ModifyDataFrm.resx">
+      <DependentUpon>ModifyDataFrm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewFrm\SalaryFrm.resx">
+      <DependentUpon>SalaryFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewFrm\SalaryFrm01.resx">
+      <DependentUpon>SalaryFrm01.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Data2\1-2月-A03日記簿.csv" />
+    <None Include="Data3\20231101.csv" />
+    <None Include="Data3\20240101.csv" />
+    <None Include="Data3\20240501.csv" />
+    <None Include="Data\20231101.csv" />
+    <None Include="Data\20240101.csv" />
+    <None Include="Data\20240501.csv" />
+    <None Include="JINSHIN.Finance.AccountSystem_1_TemporaryKey.pfx" />
+    <None Include="JINSHIN.Finance.AccountSystem_2_TemporaryKey.pfx" />
+    <None Include="JINSHIN.Finance.AccountSystem_3_TemporaryKey.pfx" />
+    <None Include="JINSHIN.Finance.AccountSystem_5_TemporaryKey.pfx" />
+    <None Include="NLog.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Resources\Diary.settings">
+      <Generator>PublicSettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Diary.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="FinanceAccountProgram.ruleset" />
+    <None Include="MetaData\106AccountMapTable.csv" />
+    <Content Include="License\01.jpg" />
+    <Content Include="License\Readme.txt" />
+    <Content Include="License\背景.gif" />
+    <Content Include="NLog.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="UpdateCenter\updateData.csv" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="AIInFo\Audio\" />
+    <Folder Include="CameraPics\" />
+    <Folder Include="Content\" />
+    <Folder Include="Data10\" />
+    <Folder Include="Data5\" />
+    <Folder Include="Data6\" />
+    <Folder Include="Data7\" />
+    <Folder Include="Data9\" />
+    <Folder Include="Exports\AssetsControl\" />
+    <Folder Include="FrmControl\Business\Money\" />
+    <Folder Include="FrmControl\Business\User\" />
+    <Folder Include="FrmControl\Invoice\DBManagement\Imgs\" />
+    <Folder Include="FrmControl\Invoice\DBManagement\pdfs\" />
+    <Folder Include="FrmControl\Invoice\DBManagement\pics\" />
+    <Folder Include="FrmControl\Invoice\DBManagement\src\" />
+    <Folder Include="Models\Financial\" />
+    <Folder Include="Models\FormShow\" />
+    <Folder Include="Models\VerifyItem\" />
+    <Folder Include="obj\Release\" />
+    <Folder Include="Output\" />
+    <Folder Include="report\" />
+    <Folder Include="VModel\AssetsCost\" />
+    <Folder Include="VModel\Business\Assets\" />
+    <Folder Include="VModel\Config\" />
+    <Folder Include="VModel\Conrols\UpdateFrm\" />
+    <Folder Include="YearBooks\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AssetsConfig.txt" />
+    <Content Include="Finance\money.txt" />
+    <Content Include="License.txt" />
+    <Content Include="Models\Accounts\說明.txt" />
+    <Content Include="photos\1.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Note\readme.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6 %28x86 和 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxWMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\JINSHIN.BUSINESS.LIBARY\JINSHIN.BUSINESS.LIBARY.csproj">
+      <Project>{50f38253-1a4d-4ca7-a736-525a16b761c4}</Project>
+      <Name>JINSHIN.BUSINESS.LIBARY</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\JINSHIN.FinanceAccount.Libary\JINSHIN.FinanceAccount.Libary.csproj">
+      <Project>{1A304020-287C-4F2E-8CAD-C4808AC8D868}</Project>
+      <Name>JINSHIN.FinanceAccount.Libary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\JINSHIN.FinanceAccounting.DB\JINSHIN.FinanceAccounting.DB.csproj">
+      <Project>{153cd8d0-4756-4cb6-827c-47400c80c1db}</Project>
+      <Name>JINSHIN.FinanceAccounting.DB</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\JINSHIN.Interface.Data\JINSHIN.Interface.Data.csproj">
+      <Project>{b21bd94a-d595-400f-ad9f-eb96263ab6c8}</Project>
+      <Name>JINSHIN.Interface.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\JINSHIN.Packages.Libary\JINSHIN.Packages.Libary.csproj">
+      <Project>{2128FE94-E148-4910-93D0-657A835D4417}</Project>
+      <Name>JINSHIN.Packages.Libary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\JINSHIN.RegProcess.Liary\JINSHIN.RegProcess.Liary.csproj">
+      <Project>{b37bae60-79e5-41df-95ce-14985c72936f}</Project>
+      <Name>JINSHIN.RegProcess.Liary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\JINSHIN.Service.Libary\JINSHIN.Service.Libary.csproj">
+      <Project>{b163ac1a-af0d-4b52-b4c1-f1f4e963c5ae}</Project>
+      <Name>JINSHIN.Service.Libary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\JINSHIN.WORK.Resource\JINSHIN.WORK.Resource.csproj">
+      <Project>{ec37818c-d97a-44cc-a4e3-428137cd6451}</Project>
+      <Name>JINSHIN.WORK.Resource</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ProjectResourceData\ProjectResourceData.csproj">
+      <Project>{cfbf7ea8-5704-4ede-adde-a331af1b8167}</Project>
+      <Name>ProjectResourceData</Name>
+    </ProjectReference>
+    <ProjectReference Include="E:\工作區\new company data\文件資訊\SVN\資訊部\軟體架構\OpenCVSharp\WindowsFormsControlLibrary1\JINSHINVision\JINSHINVision.csproj">
+      <Project>{203f0cfc-10e3-470f-91f5-b08e992663cc}</Project>
+      <Name>JINSHINVision</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>此專案參考這部電腦上所缺少的 NuGet 套件。請啟用 NuGet 套件還原，以下載該套件。如需詳細資訊，請參閱 http://go.microsoft.com/fwlink/?LinkID=322105。缺少的檔案是 {0}。</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\OpenCvSharp4.runtime.win.4.5.5.20211231\build\netstandard\OpenCvSharp4.runtime.win.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\OpenCvSharp4.runtime.win.4.5.5.20211231\build\netstandard\OpenCvSharp4.runtime.win.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+    <Error Condition="!Exists('..\packages\SkiaSharp.NativeAssets.macOS.2.88.3\build\net462\SkiaSharp.NativeAssets.macOS.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\SkiaSharp.NativeAssets.macOS.2.88.3\build\net462\SkiaSharp.NativeAssets.macOS.targets'))" />
+    <Error Condition="!Exists('..\packages\SkiaSharp.NativeAssets.Win32.2.88.3\build\net462\SkiaSharp.NativeAssets.Win32.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\SkiaSharp.NativeAssets.Win32.2.88.3\build\net462\SkiaSharp.NativeAssets.Win32.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+  <Import Project="..\packages\SkiaSharp.NativeAssets.macOS.2.88.3\build\net462\SkiaSharp.NativeAssets.macOS.targets" Condition="Exists('..\packages\SkiaSharp.NativeAssets.macOS.2.88.3\build\net462\SkiaSharp.NativeAssets.macOS.targets')" />
+  <Import Project="..\packages\SkiaSharp.NativeAssets.Win32.2.88.3\build\net462\SkiaSharp.NativeAssets.Win32.targets" Condition="Exists('..\packages\SkiaSharp.NativeAssets.Win32.2.88.3\build\net462\SkiaSharp.NativeAssets.Win32.targets')" />
+</Project>

@@ -1,0 +1,42 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="FinanceAccountProgram.Resources" GeneratedClassName="Diary">
+  <Profiles />
+  <Settings>
+    <Setting Name="Office365" Type="System.String" Scope="User">
+      <Value Profile="(Default)">299</Value>
+    </Setting>
+    <Setting Name="Salary" Type="System.String" Scope="User">
+      <Value Profile="(Default)">31937</Value>
+    </Setting>
+    <Setting Name="CompanyInsurace" Type="System.String" Scope="User">
+      <Value Profile="(Default)">2328</Value>
+    </Setting>
+    <Setting Name="LaborHealthInsuranceCost" Type="System.String" Scope="User">
+      <Value Profile="(Default)">2474</Value>
+    </Setting>
+    <Setting Name="OfficeCost" Type="System.String" Scope="User">
+      <Value Profile="(Default)">500</Value>
+    </Setting>
+    <Setting Name="DiaryAccNo" Type="System.String" Scope="User">
+      <Value Profile="(Default)">WF</Value>
+    </Setting>
+    <Setting Name="MediaCost" Type="System.String" Scope="User">
+      <Value Profile="(Default)">775</Value>
+    </Setting>
+    <Setting Name="AccNo" Type="System.String" Scope="User">
+      <Value Profile="(Default)">WF</Value>
+    </Setting>
+    <Setting Name="AccNoNum" Type="System.String" Scope="User">
+      <Value Profile="(Default)">3</Value>
+    </Setting>
+    <Setting Name="AccNoDate" Type="System.String" Scope="User">
+      <Value Profile="(Default)">yyyyMMdd</Value>
+    </Setting>
+    <Setting Name="AccYear" Type="System.String" Scope="User">
+      <Value Profile="(Default)">2020</Value>
+    </Setting>
+    <Setting Name="ReportTitle" Type="System.String" Scope="User">
+      <Value Profile="(Default)">金心資訊科技有限公司</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

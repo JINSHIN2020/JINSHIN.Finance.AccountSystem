@@ -1,0 +1,261 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AccProductMsg001" xml:space="preserve">
+    <value>請填寫完整的類別、名稱、數量、金額</value>
+    <comment>產品功能</comment>
+  </data>
+  <data name="AffairsDetailCaption01" xml:space="preserve">
+    <value>事務明細資料確認新增</value>
+    <comment>事務資料</comment>
+  </data>
+  <data name="AffairsMasterCaption01" xml:space="preserve">
+    <value>事務資料確認新增</value>
+    <comment>事務資料</comment>
+  </data>
+  <data name="AssetsMasterCaption01" xml:space="preserve">
+    <value>財產資料確認新增</value>
+    <comment>資產設定</comment>
+  </data>
+  <data name="BookAffairsAccountCaption01" xml:space="preserve">
+    <value>請選擇資料更新</value>
+    <comment>會計資料設定</comment>
+  </data>
+  <data name="BookAffairsAccountCaption02" xml:space="preserve">
+    <value>請選擇資料刪除</value>
+    <comment>會計資料設定</comment>
+  </data>
+  <data name="BookAffairsAccountCaption03" xml:space="preserve">
+    <value>請輸人新增資料</value>
+    <comment>會計資料設定</comment>
+  </data>
+  <data name="BookAffairsCaption01" xml:space="preserve">
+    <value>子明細仍有資料</value>
+  </data>
+  <data name="BookConvertCpation01" xml:space="preserve">
+    <value>沒有資料</value>
+  </data>
+  <data name="BookConvertCpation02" xml:space="preserve">
+    <value>資料完全正確</value>
+  </data>
+  <data name="BookDescCaption01" xml:space="preserve">
+    <value>有相同的資料</value>
+  </data>
+  <data name="BookDescCaption02" xml:space="preserve">
+    <value>資料尚未新增</value>
+  </data>
+  <data name="BookDescCaption03" xml:space="preserve">
+    <value>尚未填寫完整的資料</value>
+    <comment>新增商品、事務管理表單</comment>
+  </data>
+  <data name="BookDiaryCatpion01" xml:space="preserve">
+    <value>尚未選擇查詢條件</value>
+    <comment>日記簿查詢</comment>
+  </data>
+  <data name="IncomeReport001" xml:space="preserve">
+    <value>請先按查詢</value>
+    <comment>損益表</comment>
+  </data>
+  <data name="LoginLock" xml:space="preserve">
+    <value>帳號已被鎖定</value>
+    <comment>登入功能</comment>
+  </data>
+  <data name="LoginMsg" xml:space="preserve">
+    <value>帳號存在，帳號密碼錯誤? </value>
+    <comment>登入功能</comment>
+  </data>
+  <data name="LoginServerLock" xml:space="preserve">
+    <value>帳號密碼發生問題，請聯絡金心資訊</value>
+    <comment>登入功能</comment>
+  </data>
+  <data name="NoCompanyMsg" xml:space="preserve">
+    <value>廠商資料不符合，檢查廠商名稱</value>
+    <comment>序號機</comment>
+  </data>
+  <data name="Pass" xml:space="preserve">
+    <value>s8xiek2@</value>
+    <comment>OUID</comment>
+  </data>
+  <data name="RegInputError01" xml:space="preserve">
+    <value>帳號存在，統一編號、廠商鍵值、廠商名稱輸人不完整，請確認</value>
+    <comment>序號機</comment>
+  </data>
+  <data name="RegInputError02" xml:space="preserve">
+    <value>統一編號、廠商鍵值重覆、廠商名稱輸人不一致，請確認</value>
+    <comment>序號機</comment>
+  </data>
+  <data name="RegInputError03" xml:space="preserve">
+    <value>請輸入不同的使用者帳號、完整的姓名</value>
+    <comment>序號機</comment>
+  </data>
+  <data name="RegMsg" xml:space="preserve">
+    <value>第一次使用請註冊，取得帳號密碼</value>
+    <comment>登入功能</comment>
+  </data>
+  <data name="RegSNCheck" xml:space="preserve">
+    <value>有註冊序號問題,請聯絡金心資訊</value>
+  </data>
+  <data name="RegUserMsg001" xml:space="preserve">
+    <value>請先產生序號</value>
+    <comment>序號機</comment>
+  </data>
+  <data name="RegUserMsg002" xml:space="preserve">
+    <value>帳號的擁有人不是你</value>
+    <comment>序號機</comment>
+  </data>
+  <data name="RegUserMsg003" xml:space="preserve">
+    <value>帳號存在、廠商資料不符合，檢查廠商鍵值及資料</value>
+    <comment>序號機</comment>
+  </data>
+  <data name="RegUserMsg005" xml:space="preserve">
+    <value>帳號存在，廠商資料不符合，檢查廠商名稱</value>
+    <comment>序號機</comment>
+  </data>
+  <data name="RegUserMsg006" xml:space="preserve">
+    <value>帳號不存在、廠商資料不符合，檢查廠商鍵值及資料</value>
+    <comment>序號機</comment>
+  </data>
+  <data name="RegUserMsg007" xml:space="preserve">
+    <value>帳號存在，統一編號有誤</value>
+    <comment>序號機</comment>
+  </data>
+  <data name="RegUserMsg008" xml:space="preserve">
+    <value>帳號存在，請核對個人資料及姓名</value>
+  </data>
+  <data name="SNAgree" xml:space="preserve">
+    <value>請勾選同意以上條款</value>
+    <comment>序號機</comment>
+  </data>
+  <data name="SNKey" xml:space="preserve">
+    <value>請填寫 （鍵值 )</value>
+    <comment>序號機</comment>
+  </data>
+  <data name="UpdateServerAgain" xml:space="preserve">
+    <value>更動了使用者帳號，請再取序號</value>
+    <comment>註冊機</comment>
+  </data>
+  <data name="UserName" xml:space="preserve">
+    <value>Finance06</value>
+    <comment>UserNo</comment>
+  </data>
+  <data name="UserNameTheSame" xml:space="preserve">
+    <value>已有相同的使用者名稱</value>
+    <comment>登入功能</comment>
+  </data>
+</root>
